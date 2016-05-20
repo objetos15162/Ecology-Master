@@ -14,10 +14,12 @@ public  class Usuario extends Actor
     /**
      * Constructor del usuario
      */
-    public Usuario(){
+    public Usuario()
+    {
         puntos = 0;
         nombre = "";
     }
+    
     /** siempre inicializa las variables para que no existan errores
      * 
      */

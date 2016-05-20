@@ -35,23 +35,9 @@ public class Regar extends Actor
            y= derecha.getY();
            x= derecha.getX();
         
-           if( y <= 357)
-           setLocation(x,y);
-         /*if(Greenfoot.isKeyDown("left")){
-            x-=2;
-         }
-         if(Greenfoot.isKeyDown("right")){
-             x+=2;
-         }
-         if(Greenfoot.isKeyDown("down")){
-             if(y <= 357)
-           y+=2;   
-         }
-         if(Greenfoot.isKeyDown("up")){
-             if(y >= 280)
-           y-=2;
-         }
-         setLocation(x,y);*/
+           if( y <= 357) {
+               setLocation(x,y);
+            }
         }    
     }
 }

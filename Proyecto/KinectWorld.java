@@ -239,7 +239,7 @@ public abstract class KinectWorld extends World
         else
         {
             GreenfootImage img = kinect.getCombinedUserImage();
-            if (img != null)
+            if (img != null) 
                 img.scale((int)(scale * img.getWidth()), (int)(scale * img.getHeight()));
             return img;
         }
@@ -262,18 +262,21 @@ public abstract class KinectWorld extends World
      */
     public short getDepthAt(int x, int y)
     {
-        if (kinect == null)
+        if (kinect == null) {
             return 0;
+        }
 
         short[] depthArray = kinect.getRawDepth();
-        if (depthArray == null)
+        if (depthArray == null) {
             return 0;
+        }
 
         int sy = (int)((double)y / scale);
         int sx = (int)((double)x / scale);
         int i = sy * 640 + sx;
-        if (x < 0 || y < 0 || x >= getWidth() || y >= getHeight() || i < 0 || i >= depthArray.length)
+        if (x < 0 || y < 0 || x >= getWidth() || y >= getHeight() || i < 0 || i >= depthArray.length)  {
             return 0;
+        }
         return depthArray[i];
     }
 

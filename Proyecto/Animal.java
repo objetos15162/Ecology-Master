@@ -50,22 +50,6 @@ public class Animal extends Puntos
                setLocation(x,y);
            }
         }
-        /*if(Greenfoot.isKeyDown("down")){
-            if(y <= 440)
-          y+=2;   
-        }
-        if(Greenfoot.isKeyDown("up")){
-            if(y >= 280)
-          y-=2;
-        }
-        if(Greenfoot.isKeyDown("left")){
-            x-=2;
-        }
-        if(Greenfoot.isKeyDown("right")){
-            x+=2;
-        }
-        setMove(x,y);
-        */
     }    
     
     /**

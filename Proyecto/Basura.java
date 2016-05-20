@@ -35,7 +35,7 @@ public class Basura extends Actor
         World m = getWorld();
         Mar mundo = (Mar)m;
         
-        CargarImagen(nombre);
+        cargarImagen(nombre);
         
         if( touchme()) {
             setPosition(mundo.getAnclaLocationX(),mundo.getAnclaLocationY());
@@ -62,7 +62,7 @@ public class Basura extends Actor
      * @param nombre
      * carga la imagen
      */
-    public void CargarImagen(String nombre)
+    public void cargarImagen(String nombre)
     {
         img = new GreenfootImage(nombre);
         setImage(img);

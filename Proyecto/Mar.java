@@ -6,16 +6,6 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-
-        
-
-
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Mar extends Juego
 {
     private Ancla a ; // objeto ancla
@@ -28,9 +18,7 @@ public class Mar extends Juego
      * 
      */
     public Mar()
-    {
-         //super(KinectClient.DEFAULT_IMAGE_WIDTH, KinectClient.DEFAULT_IMAGE_HEIGHT, 2, false);
-         //super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false); 
+    { 
          super(true);        
          setVida(10);
          x=y=puntos=0;
@@ -43,8 +31,6 @@ public class Mar extends Juego
     public void act()
     {
         super.act();
-        /* if (!isConnected())
-            return;*/
         setVida(getVida()); 
         setPuntos(getPuntos());
         if(getPuntos() >= 10 ) {

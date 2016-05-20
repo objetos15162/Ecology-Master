@@ -35,22 +35,8 @@ public class Ancla extends Puntos
     public void act() 
     {
         posicionar();  
-        //mar world =   (mar)getWorld();
         Juego world = (Juego)getWorld();
         UserData[] us = world.getTrackedUsers();
-        /* if(Greenfoot.isKeyDown("down")){
-           y+=2;   
-         }
-         if(Greenfoot.isKeyDown("up")){
-           y-=2;
-         }
-         if(Greenfoot.isKeyDown("left")){
-             x-=2;
-         }
-         if(Greenfoot.isKeyDown("right")){
-             x+=2;
-         }
-         setLocation(x,y);*/
         for (UserData u : us) {
             Joint derecha = u.getJoint(Joint.RIGHT_HAND);
             setLocation(derecha.getX(),derecha.getY());
@@ -61,8 +47,9 @@ public class Ancla extends Puntos
         if(tocandoPez()) {
              eliminaPez();
         }
-        isTouchingcontenedor();
+        isTouchingContenedor();
     }
+    
     /**
          * @return boolean
          * verifica si estamos tocando un objeto del tipo basura
@@ -123,7 +110,7 @@ public class Ancla extends Puntos
      * retorna si estamos tocando el contenedor
      */
     
-    public boolean isTouchingcontenedor()
+    public boolean isTouchingContenedor()
     {
         if(isTouching(Contenedor.class)) {
             flagContenedor = true;

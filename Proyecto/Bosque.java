@@ -40,7 +40,6 @@ public class Bosque extends Juego
     public void act()
     {    
         super.act();
-        //setPuntos(c.getPuntos());
         if(c.tocando()) {
             i++;
             if( i < 4) {

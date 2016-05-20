@@ -29,7 +29,7 @@ public class Pez extends Actor
         this.nombre = nombre;
         this.velocidad = velocidad;
         this.direccion = direccion;
-        CargarImagen(nombre);
+        cargarImagen(nombre);
     }
     
     /**
@@ -57,11 +57,11 @@ public class Pez extends Actor
         }
         
         if(x >= mi_mundo.getWidth() - img.getWidth() && direccion) {
-           ReiniciarPez();
+           reiniciarPez();
         }
            
         if(x  <= img.getWidth()  && !direccion) {
-            ReiniciarPez();
+            reiniciarPez();
         }
         setLocation(x,y);
     }
@@ -69,7 +69,7 @@ public class Pez extends Actor
     /**
     * metodo para desaparecer pez y cambiar direccion
     */
-    public void ReiniciarPez()
+    public void reiniciarPez()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
@@ -92,7 +92,7 @@ public class Pez extends Actor
      * metodo para cargar imagen del pez
      * 
      */
-    public void CargarImagen(String nombre)
+    public void cargarImagen(String nombre)
     {
         img = new GreenfootImage(nombre);
         setImage(img);

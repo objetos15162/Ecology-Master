@@ -23,6 +23,6 @@ comment7.params=
 comment7.target=boolean\ tocandoPez()
 comment7.text=\r\n\ @return\ boolean\r\n\ retorna\ bandea\ si\ esta\ tocando\ algun\ objeto\ del\ tipo\ pez\r\n
 comment8.params=
-comment8.target=boolean\ isTouchingcontenedor()
+comment8.target=boolean\ isTouchingContenedor()
 comment8.text=\r\n\ @return\ boolean\r\n\ retorna\ si\ estamos\ tocando\ el\ contenedor\r\n
 numComments=9
