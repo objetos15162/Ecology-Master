@@ -10,7 +10,7 @@ public class Menu extends KinectWorld
 {
 
     /**
-     * Constructor for objects of class Menu.
+     * Cara los botones para la interfaz de ayuda.
      * 
      */
     public Menu()
@@ -18,6 +18,10 @@ public class Menu extends KinectWorld
         prepare();
     }
     
+    /**
+     * Contiene los metodos de agregar objeto y los nombres de los objetos
+     * para cargar en el menu de inicio
+     */
     private void prepare()
     {
         ButtonPlay play = new ButtonPlay();

@@ -2,12 +2,16 @@
 comment0.target=Label
 comment1.params=text
 comment1.target=Label(java.lang.String)
+comment1.text=\r\n\ @Param\ String\ text\ \ nombre\ del\ texto\r\n
 comment2.params=text\ size
 comment2.target=Label(java.lang.String,\ int)
+comment2.text=\r\n\ @Param\ String\ text\ \ nombre\ del\ texto\r\n\ @Param\ int\ size\ tama\u00F1o\ del\ texto\r\n
 comment3.params=text
 comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ @String\ text\r\n\ Modifica\ el\ texto\r\n
 comment4.params=text\ size
 comment4.target=void\ setText(java.lang.String,\ int)
+comment4.text=\r\n\ @String\ text\r\n\ @int\ size\r\n\ Modifica\ el\ texto\r\n
 comment5.params=
 comment5.target=void\ act()
 numComments=6

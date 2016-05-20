@@ -6,138 +6,128 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Ancla extends Actor{
-    /**
-     * Act - do whatever the ancla wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+public class Ancla extends Puntos
+{
     private int x , y;
     GreenfootImage img; 
     private boolean flagPez;
     private int puntos , vida;
-    private boolean flagBasura,flagContenedor;
+    private boolean flagBasura, flagContenedor;
     
+    /**
+     * constructor
+     */
     public Ancla ()
-    {    
+    {
+        super();
         img =  new GreenfootImage("ancla.png");
         x = 250;
         y = 50;
         agregar();
         flagBasura = flagPez = false;
         puntos = 0;
-        vida = 7;
+        vida = 10;
     }
     
+    /**
+     * obtiene la posicion de mi usuario y  esta checando si toca a un pez
+     */
     public void act() 
     {
-      posicionar();
-      Mar world = (Mar)getWorld();
-      UserData[] us = world.getTrackedUsers();
-      if(Greenfoot.isKeyDown("down")) {
-          y+=2;   
-      }
+        posicionar();  
+        //mar world =   (mar)getWorld();
+        Juego world = (Juego)getWorld();
+        UserData[] us = world.getTrackedUsers();
+        /* if(Greenfoot.isKeyDown("down")){
+           y+=2;   
+         }
+         if(Greenfoot.isKeyDown("up")){
+           y-=2;
+         }
+         if(Greenfoot.isKeyDown("left")){
+             x-=2;
+         }
+         if(Greenfoot.isKeyDown("right")){
+             x+=2;
+         }
+         setLocation(x,y);*/
+        for (UserData u : us) {
+            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
+            setLocation(derecha.getX(),derecha.getY());
+            x= derecha.getX();
+            y= derecha.getY();
+        }
         
-      if(Greenfoot.isKeyDown("up")) {
-          y-=2;
-      }
-      
-      if(Greenfoot.isKeyDown("left")) {
-          x-=2;
-      }
-      
-      if(Greenfoot.isKeyDown("right")) {
-          x+=2;
-      }
-        
-      setLocation(x,y);
-       /*for (UserData u : us){
-           Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-           setLocation(derecha.getX(),derecha.getY());
-        
-        x= derecha.getX();
-        y= derecha.getY();
-       }*/
-     
-      if(tocandoPez())
-          eliminaPez();
-          
-      isTouchingcontenedor();
+        if(tocandoPez()) {
+             eliminaPez();
+        }
+        isTouchingcontenedor();
     }
-        
+    /**
+         * @return boolean
+         * verifica si estamos tocando un objeto del tipo basura
+         */
     public boolean touchingBasura()
     {            
-        if(isTouching(Basura.class))
+        if(isTouching(Basura.class)) {
                 flagBasura = true;
-         else
+            }
+         else {
             flagBasura = false;
-            
+        }
         return flagBasura;
     }
      
-    public boolean getFlag()
-    {
-        return flagPez;
-    }
-    
-    public void posicionar( )
+    /**
+     * Posiciona objeto
+     */
+    public void posicionar()
     {
         setLocation(x,y);
     }
     
-    public void getValores(int x , int y )
-    {
-        this.x = x;
-        this.y = y;
-    }
-    
-    public void agregar()
-    {
+    /**
+     * agrega mi imagen
+     */
+     public void agregar()
+     {
         setImage(img);
     }
-  
-    public int getX()
-    {
-        return x;
-    }
-    
-    public int getY()
-    {
-        return y;
-    }
-    
-    public boolean getFlagBasura()
-    {
-        return flagBasura;
-    }
-    
+
+    /**
+     * Metodo para eliminar a mi clase pez y modifica puntuacion
+     */
     private void eliminaPez()
     {
+        setPuntos(getPuntos());
         removeTouching(Pez.class);
     }
     
+    /**
+     * @return boolean
+     * retorna bandea si esta tocando algun objeto del tipo pez
+     */
     private boolean tocandoPez()
     {
         if(isTouching(Pez.class)) {
-            vida--;
+            setVida(vida-=1);
             return true;
         }
-        else
+        else {
             return false;
+        }
     }
     
-    public int getVida()
+    /**
+     * @return boolean
+     * retorna si estamos tocando el contenedor
+     */
+    
+    public boolean isTouchingcontenedor()
     {
-        return vida;
-    }
-    
-    private void isTouchingcontenedor(){
-        if(isTouching(Contenedor.class)&& !flagContenedor )
-           puntos++;
-        
-    }
-    
-    public void setValueContenedor(boolean transparencia)
-    {    
-        flagContenedor = transparencia;
+        if(isTouching(Contenedor.class)) {
+            flagContenedor = true;
+        }
+        return flagContenedor;        
     }
 }

@@ -9,11 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ButtonHelp extends Actor
 {
     /**
-     * Act - do whatever the ButtonHelp wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * RNos lleva al menu de ayuda
      */
+    public ButtonHelp()
+    {
+    }
+    
     public void act() 
     {
-        // Add your action code here.
+        if(Greenfoot.mouseClicked(this)) {
+            Greenfoot.setWorld(new Ayuda());
+        }
     }    
 }

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Bosque
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ bosque\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=vida\ puntos
+comment1.target=Bosque(int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ bosque.\r\n\ Constructor\r\n\ @param\ int\ vida\ \ \ \ recibe\ la\ vida\ del\ jugador\ del\ nivel\ anterior\r\n\ @param\ int\ puntos\ recibe\ los\ puntos\ del\ jugador\ del\ nivel\ anterior\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ verifica\ que\ objeto\ se\ toca\ para\ cambiar\ de\ animal\ y\ cambia\ al\ nivel\ 3\r\n
+comment3.params=
+comment3.target=void\ prepare()
+comment3.text=\r\n\ prepara\ el\ mundo\ del\ nivel\r\n
+numComments=4

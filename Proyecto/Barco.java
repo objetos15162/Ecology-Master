@@ -16,6 +16,9 @@ public class Barco extends Actor
     private int x;
     private int y;
     
+    /**
+     * Constructor
+     */
     public Barco()
     {
         img =  new GreenfootImage("barco.png");
@@ -24,33 +27,27 @@ public class Barco extends Actor
         agregar();
     }
     
+    /**
+     * cambia la posicion de mi barco
+     */
     public void act() 
     {
-      
-      Mar world = (Mar)getWorld();
-      UserData[] us = world.getTrackedUsers();
-      
-      for (UserData u : us) {
-           Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-           setLocation(derecha.getX(),50);
-           x = derecha.getX();
-           y = derecha.getY();
-      }
+        Mar world =   (Mar)getWorld();
+        UserData[] us = world.getTrackedUsers(); 
+        for (UserData u : us) {
+            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
+            setLocation(derecha.getX(),50);
+            x = derecha.getX();
+            y = derecha.getY();
+        }
     }
     
+    /**
+     * Metodo para agregar y escalar imagen
+     */
     public void agregar()
     {    
         setImage(img);
         img.scale(70,70);
-    }
-    
-    public int getX()
-    {
-        return x;
-    }
-    
-    public int getY()
-    {
-        return y;
     }
 }

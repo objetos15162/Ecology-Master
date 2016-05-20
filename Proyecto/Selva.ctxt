@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Selva
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ selva\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=vida\ puntos
+comment1.target=Selva(int,\ int)
+comment1.text=\r\n\ @param\ int\ vida\ ,\ recibe\ la\ vida\ del\ jugador\ del\ nivel\ anterior\r\n\ @param\ int\ puntos\ ,\ recibe\ los\ puntos\ del\ jugador\ del\ nivel\ anterior\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ suma\ la\ puntuacion\ \ de\ cada\ planta\ para\ regresar\ al\ menu\ inicial\r\n
+numComments=3

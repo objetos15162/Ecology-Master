@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ animal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=vida\ puntos\ nombre
+comment1.target=Animal(int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\r\n\ @param\ int\ vida\r\n\ @param\ int\ puntos\r\n\ @param\ String\ nombre\r\n\ recibe\ vida\ y\ puntos\ del\ jugador\ para\ modificarlos\ \r\n\ y\ recibe\ el\ nombre\ de\ la\ imagen\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\ \r\n\ modifica\ la\ posicion\ de\ mi\ animal\ \ y\ verifica\ si\ toca\ animales\r\n
+comment3.params=x\ y
+comment3.target=void\ setMove(int,\ int)
+comment3.text=\r\n\ @param\ int\ x\r\n\ @param\ int\ y\r\n\ \r\n\ Modifica\ la\ posicion\ de\ mi\ imagen\ \r\n
+comment4.params=
+comment4.target=void\ isTouchingEnemy()
+comment4.text=\r\n\ Verifica\ si\ estamos\ tocando\ a\ un\ objeto\ del\ tipo\ gif(enemigo)\r\n
+numComments=5

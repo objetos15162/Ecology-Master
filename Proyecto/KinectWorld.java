@@ -20,7 +20,8 @@ public abstract class KinectWorld extends World
 {
     private final KinectClient kinect;
     private final double scale;
-
+    
+    
     /**
      * Constructs a KinectWorld that is 640 by 480 pixels,
      * with a full-sized thumbnail (RGB) image available, but no depth information.
@@ -30,6 +31,8 @@ public abstract class KinectWorld extends World
     public KinectWorld()
     {
         this(1.0, false);
+        
+      
     }
 
     /**
@@ -74,6 +77,10 @@ public abstract class KinectWorld extends World
         this.scale = scale;
 
         kinect = new KinectClient(thumbnailWidth, thumbnailHeight, depth);
+        
+        //punt = vid = 0;
+       
+     
     }
     
     /**
@@ -83,7 +90,10 @@ public abstract class KinectWorld extends World
     {
         if (isConnected())
             kinect.update();
+            
     }
+    
+ 
     
     /**
      * Checks whether we are currently connected properly to a functioning KinectServer.

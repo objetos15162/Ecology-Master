@@ -8,13 +8,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fondo extends Actor
 {
+    
+    private String nombre ; // variable que guarda el nombre del fondo
+    
     /**
-     * Act - do whatever the fondo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor
+     * @param String nombre  recibe el nombre del fondo
+     */
+    public Fondo(String nombre)
+    {
+        this.nombre = nombre;    
+    }
+    
+    /**
+     * Añade el objeto de imagen
      */
     public void act() 
     {
-       GreenfootImage img = new GreenfootImage("olas.png");
+       GreenfootImage img = new GreenfootImage(nombre);
        setImage(img);      
        img.scale(4000,100);
     }    

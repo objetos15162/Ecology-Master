@@ -8,89 +8,84 @@ import java.lang.Math.*;
  */
 public class Basura extends Actor
 {
-    private GreenfootImage img;
-    private String nombre;
-    private int x , y;
-    private SimpleTimer timer;
-    private int currentMillis;
-    private int delay;
-    private boolean tocando;
-    private boolean flagContenedor; 
-    private boolean flagPuntos;
-    private boolean flagTransparencia;
-    
-    public Basura(String nombre ,int delay, int x , int y )
+    private GreenfootImage img; // objeto tipo imagen
+    private String nombre; // objeto para guardar nombre de imagen
+    private int x , y; // posicion x y y
+    private boolean tocando; // bandera
+    private boolean flagContenedor; // bandera Contenedor
+    /**
+     * Constructor
+     * @param nombre  nombre de la imagen
+     * @param int x posicion objeto
+     * @param int y posicon objeto
+     */
+    public Basura(String nombre , int x , int y )
     {
         this.nombre = nombre;
         tocando = false;
-        currentMillis = 0;
-         this.x =x;
-         this.y = y;
-        timer = new SimpleTimer();
-        this.delay = delay;
-        flagContenedor = false;
-        flagTransparencia= false;
-        flagPuntos = false;
+        this.x =x;
+        this.y = y;
     }
     
+    /**
+     * posiciona la basura en random
+     */
     public void act() 
     {
-        CargarImagen(nombre);
-  
-        if(touchingContenedor())
-            checkTransparencia();
+        World m = getWorld();
+        Mar mundo = (Mar)m;
         
+        CargarImagen(nombre);
+        
+        if( touchme()) {
+            setPosition(mundo.getAnclaLocationX(),mundo.getAnclaLocationY());
+        }
     }
     
+    /**
+     * @return regresa posicion X
+     */
     public int getX()
     {
         return this.x;
     }
     
+    /**
+     * @return regresa posicion y
+     */
     public int getY()
     {
-        return this.y ;
+        return this.y;
     }
     
+    /**
+     * @param nombre
+     * carga la imagen
+     */
     public void CargarImagen(String nombre)
     {
         img = new GreenfootImage(nombre);
         setImage(img);
     }
     
+    /**
+     * @return tocando  
+     * retorna bandera si esta tocando el ancla
+     */
     public boolean touchme()
     {
-        if(isTouching(Ancla.class) && !flagContenedor)
+        if(isTouching(Ancla.class) /*&& !flagContenedor*/) {
             tocando = true;
-            
+        }
         return tocando;
     }
     
-     public boolean touchingContenedor()
-     {
-        if(isTouching(Contenedor.class)) {
-            flagContenedor= true;
-            flagPuntos = true;
-        }
-        
-        return flagContenedor;
-    }
-    
-    public boolean transparencia()
-    {    
-       return flagTransparencia;
-    }
-    
-    private void checkTransparencia()
+    /**
+     * @param int x  modifica posicion x
+     * @param int y modifica posicion y
+     */
+    public void setPosition(int x , int y )
     {
-       if(flagContenedor ){
-            img.setTransparency(0);     
-            flagTransparencia = true;
-       }  
-    }
-    
-    public boolean getFlagPuntos()
-    {    
-        return flagPuntos;
+        setLocation(x,y);
     }
 }

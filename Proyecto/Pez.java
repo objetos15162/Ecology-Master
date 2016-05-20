@@ -15,6 +15,13 @@ public class Pez extends Actor
     private boolean direccion;
     private GreenfootImage img ;
     
+    /**
+     * @param int x posicion x
+     * @param int y posicion y
+     * @param String nombre nombre de la imagen
+     * @param int velocidad velocidad del pez
+     * @param boolean direccion bander que nos indica la direccion del pez
+     */
     public Pez(int x , int y , String nombre , int velocidad , boolean direccion)
     {
         this.x = x;
@@ -25,40 +32,54 @@ public class Pez extends Actor
         CargarImagen(nombre);
     }
     
+    /**
+     * mueve a los peces
+     */
     public void act() 
     {
         mover();
     }    
     
+    /**
+     * Metodo para mover a mi pez dentro del mundo
+     */
     public void mover()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(x <= mi_mundo.getWidth() - img.getWidth() && direccion)
+        if(x <= mi_mundo.getWidth() - img.getWidth() && direccion) {
             x+=velocidad;
+        }
         
-        if(x >= img.getWidth() && !direccion)
+        if(x >= img.getWidth() && !direccion) {
             x-=velocidad;
+        }
         
-        if(x >= mi_mundo.getWidth() - img.getWidth() && direccion)
+        if(x >= mi_mundo.getWidth() - img.getWidth() && direccion) {
            ReiniciarPez();
+        }
            
-        if(x  <= img.getWidth()  && !direccion)
+        if(x  <= img.getWidth()  && !direccion) {
             ReiniciarPez();
-           
+        }
         setLocation(x,y);
     }
-  
+    
+    /**
+    * metodo para desaparecer pez y cambiar direccion
+    */
     public void ReiniciarPez()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(direccion)
+        if(direccion) {
             x = img.getWidth();
-        else
+        }
+        else {
             x = mi_mundo.getWidth() - img.getWidth();
+        }
      
         img.setTransparency(0);
         y=(int)(Math.random()*250+200);
@@ -66,10 +87,15 @@ public class Pez extends Actor
         img.setTransparency(255);
     }
     
+    /**
+     * @param Strin nombre  recibe el nombre de la imagen
+     * metodo para cargar imagen del pez
+     * 
+     */
     public void CargarImagen(String nombre)
     {
         img = new GreenfootImage(nombre);
         setImage(img);
-        img.scale(30,20);    
+        img.scale(30,20);
     }
 }

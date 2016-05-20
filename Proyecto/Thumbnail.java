@@ -13,8 +13,7 @@ public class Thumbnail  extends Actor
     }
 
     /**
-     * Act - do whatever the Thumbnail wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     *Pone imagen para visualizar a nuestro jugador
      */
     public void act() 
     {

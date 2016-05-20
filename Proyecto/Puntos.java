@@ -9,44 +9,70 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Puntos extends Actor
 {
     /**
-     * Act - do whatever the puntos wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * constructor
      */
-    private boolean bandera ;
-    private int puntos;
-    
     public Puntos()
     {
-        bandera = false;
-        puntos = 0;
     }
     
     public void act() 
     {
-        if(getBandera()) {
-            setPuntos();
-        }
     }    
     
-    public void setBandera(boolean bandera)
+    /**
+     * @param int puntaje   recibe el puntaje del jugador
+     * Modifica el puntaje del jugador
+     */
+    public void setPuntos(int puntaje)
     {
-        this.bandera = bandera;
+        World mundo = getWorld();
+        Juego mi_mundo =(Juego)mundo;
+        puntaje = getPuntos();
+        puntaje -=1;
+        mi_mundo.setPuntos(puntaje);
     }
     
+    /**
+     * @return puntos regresa los puntos de mi jugador
+     */
     public int getPuntos()
     {
-        return puntos;
+        World mundo = getWorld();
+        Juego mi_mundo =(Juego)mundo;
+        return(mi_mundo.getPuntos());
     }
     
-    private void setPuntos()
+    /**
+     * @param int vida recibe la vida del jugador
+     * Modifica la vida del jugador
+     */
+    public void setVida(int vida)
     {
-        puntos++;
+        World mundo = getWorld();
+        Juego mi_mundo =(Juego)mundo;
+        mi_mundo.setVida(vida);    
     }
     
-    public boolean getBandera()
+    /**
+     * @return int vida regresa vida del jugador
+     */
+    public int getVida()
     {
-        return bandera;
+        World mundo = getWorld();
+        Juego mi_mundo =(Juego)mundo;
+        return(mi_mundo.getVida());
     }
     
-    
+    /**
+     * @param int puntaje  recibe los puntos del jugador
+     * aumenta los puntos de mi jugador 
+     */
+    public void setPuntosPositive(int puntaje)
+    {
+        World mundo = getWorld();
+        Juego mi_mundo =(Juego)mundo;
+        puntaje = mi_mundo.getPuntos();
+        puntaje +=3;
+        mi_mundo.setPuntos(puntaje);
+    }
 }

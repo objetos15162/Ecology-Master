@@ -11,7 +11,12 @@ public class Instructions  extends Actor
     private GreenfootImage begin;
     private GreenfootImage blank;
     private GreenfootImage calibrating;    
+    private boolean flag;
     
+    /**
+     * @Param World world recibe mi objeto mundo
+     * 
+     */
     protected void addedToWorld(World world)
     {
         begin = new GreenfootImage("begin.png");
@@ -20,16 +25,15 @@ public class Instructions  extends Actor
         calibrating.scale(world.getWidth(), world.getHeight());
         blank = new GreenfootImage(1, 1);
         setImage(blank);
+        flag = false;
     }
 
     /**
-     * Act - do whatever the Instructions wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Calibra a mi kinect
      */
     public void act() 
     {
         KinectWorld world = (KinectWorld)getWorld();
-        
         boolean trackingAny = false;
         boolean calibratingAny = false;
         UserData[] us = world.getAllUsers();
@@ -39,14 +43,23 @@ public class Instructions  extends Actor
         }
         
         if (us.length > 0 && !trackingAny && ! calibratingAny) {
-            setImage(begin);
+            //setImage(begin);   
         }
-        
         else if (us.length > 0 && !trackingAny && calibratingAny) {
-            setImage(calibrating);
+            //setImage(calibrating);
         }
         else {
-            setImage(blank);
+            //setImage(blank);
+            flag = true;
         }
-    }    
+    }   
+    
+    /**
+     * @return boolean flag  bandera para saber si kinect quedo calibrado
+     * metodo para saber si el kinect esta calibrado
+     */
+    public boolean getFlag()
+    {
+        return flag;
+    }
 }

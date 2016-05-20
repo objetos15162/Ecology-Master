@@ -12,6 +12,13 @@ public class FondoOceano extends Actor
      * Act - do whatever the fondooceano wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public FondoOceano()
+    {
+    }
+    
+    /**
+     * establece fondo de oceano
+     */
     public void act() 
     {
        GreenfootImage img = new GreenfootImage("fondo.jpg");     
