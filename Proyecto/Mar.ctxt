@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Mar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ kinectMundo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Primer\ nivel\ del\ juego.\r\n\ En\ este\ nivel,\ se\ tiene\ que\ recoger\ la\ basura\ y\ llevarse\ a\ un\ contenedor.\r\n\ Si\ tocas\ a\ un\ pez,\ te\ quita\ una\ vida.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=Mar()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ selva.\r\n\ \r\n

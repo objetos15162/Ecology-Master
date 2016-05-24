@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.Math.*;
 /**
- * Write a description of class pez here.
+ * Esta clase nos muestra los peces.
+ * Le da el movimiento a los peces.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Pez extends Actor
 {

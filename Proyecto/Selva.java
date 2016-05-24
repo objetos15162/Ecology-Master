@@ -1,15 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class selva here.
+ * El segundo nivel del juego, donde se tienen que llevar a los animales a la puerta para salvarlos.
+ * Habra cazadores, se tienen que evitar.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Selva extends Juego
 {
     private int vida; // variable para nuestro constructor
-    private Plantas p0,p1,p2,p3,p4; // objetos a regar
+    private Planta p0,p1,p2,p3,p4; // objetos a regar
     /**
      * Constructor for objects of class selva.
      * 
@@ -24,11 +25,11 @@ public class Selva extends Juego
         super.setVida(vida);
         super.setPuntos(puntos);
         this.vida = vida;
-        p0 = new Plantas();
-        p1 = new Plantas();
-        p2 = new Plantas ();
-        p3 = new Plantas();
-        p4 = new Plantas();
+        p0 = new Planta();
+        p1 = new Planta();
+        p2 = new Planta ();
+        p3 = new Planta();
+        p4 = new Planta();
         
         addObject(new Regar(),250,358);
         addObject(p0,200,400);

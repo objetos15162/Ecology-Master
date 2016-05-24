@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ButtonExit
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ButtonExit\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Es\ el\ boton\ de\ retorno\ al\ menu\ cuando\ estamos\ en\ los\ mundos\ Record\ y\ Ayuda.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=ButtonExit()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ButtonExit\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

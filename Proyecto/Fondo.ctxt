@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Fondo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ fondo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Fondo\ en\ mundo\ Ayuda\ y\ Record.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=nombre
 comment1.target=Fondo(java.lang.String)
 comment1.text=\r\n\ Constructor\r\n\ @param\ String\ nombre\ \ recibe\ el\ nombre\ del\ fondo\r\n

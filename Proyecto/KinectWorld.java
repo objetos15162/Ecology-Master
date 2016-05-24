@@ -21,7 +21,6 @@ public abstract class KinectWorld extends World
     private final KinectClient kinect;
     private final double scale;
     
-    
     /**
      * Constructs a KinectWorld that is 640 by 480 pixels,
      * with a full-sized thumbnail (RGB) image available, but no depth information.

@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=Label
+comment0.text=\r\n\ Nos\ muestra\ mensajes.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=text
 comment1.target=Label(java.lang.String)
 comment1.text=\r\n\ @Param\ String\ text\ \ nombre\ del\ texto\r\n

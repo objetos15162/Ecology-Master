@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.lang.Math.*;
 /**
- * Write a description of class basura here.
+ * Nos muestra los objeto basura.
+ * Nos indica su posicion, y nos indica si fue tocado.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Basura extends Actor
 {

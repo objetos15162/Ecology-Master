@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Puntaje
+comment0.text=\r\n\ Nos\ guarda\ el\ puntaje\ que\ se\ acumula\ en\ cada\ nivel.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
+comment1.params=
+comment1.target=Puntaje()
+comment1.text=\r\n\ constructor\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=puntaje
+comment3.target=void\ setPuntos(int)
+comment3.text=\r\n\ @param\ int\ puntaje\ \ \ recibe\ el\ puntaje\ del\ jugador\r\n\ Modifica\ el\ puntaje\ del\ jugador\r\n
+comment4.params=
+comment4.target=int\ getPuntos()
+comment4.text=\r\n\ @return\ puntos\ regresa\ los\ puntos\ de\ mi\ jugador\r\n
+comment5.params=vida
+comment5.target=void\ setVida(int)
+comment5.text=\r\n\ @param\ int\ vida\ recibe\ la\ vida\ del\ jugador\r\n\ Modifica\ la\ vida\ del\ jugador\r\n
+comment6.params=
+comment6.target=int\ getVida()
+comment6.text=\r\n\ @return\ int\ vida\ regresa\ vida\ del\ jugador\r\n
+comment7.params=puntaje
+comment7.target=void\ setPuntosPositive(int)
+comment7.text=\r\n\ @param\ int\ puntaje\ \ recibe\ los\ puntos\ del\ jugador\r\n\ aumenta\ los\ puntos\ de\ mi\ jugador\ \r\n
+numComments=8

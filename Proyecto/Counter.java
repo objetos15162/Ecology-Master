@@ -9,27 +9,9 @@ import java.awt.Color;
  * can adjust its value.  Here's an example of a world class that
  * displays a counter with the number of act cycles that have occurred:
  * 
- * <pre>
- * class CountingWorld
- * {
- *     private Counter actCounter;
- *     
- *     public CountingWorld()
- *     {
- *         super(600, 400, 1);
- *         actCounter = new Counter("Act Cycles: ");
- *         addObject(actCounter, 100, 100);
- *     }
- *     
- *     public void act()
- *     {
- *         actCounter.setValue(actCounter.getValue() + 1);
- *     }
- * }
- * </pre>
  * 
- * @author Neil Brown and Michael Kölling 
- * @version 1.0
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Counter extends Actor
 {

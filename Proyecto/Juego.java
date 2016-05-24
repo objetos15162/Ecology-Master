@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class JUEGO here.
+ * Nos cambiara de nivel, al que queremos avanzar.
+ * Nos gardara los puntos
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Juego extends KinectWorld
 {
@@ -15,8 +16,8 @@ public class Juego extends KinectWorld
     private int pun , vid,lvl; // variables privadas  para puntuacion vida y nivel
     private String nombre; // agrega el nombre del jugador
     private Usuario usuario; // guarda todos los datos del jugador
-    private Records record; // objeto para actualizar los records
-    private Instructions i; // objeto que nos permite detectar usuario kinect
+    private Record record; // objeto para actualizar los records
+    private Instruction i; // objeto que nos permite detectar usuario kinect
     
     /**
      * Constructor for objects of class JUEGO.
@@ -28,11 +29,11 @@ public class Juego extends KinectWorld
         
         super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false); 
         this.lvl = lvl;
-        i = new Instructions();
+        i = new Instruction();
         final int width = getWidth();
         final int height = getHeight();
         addObject(i, width/2, height/2);
-        addObject(new Thumbnail(), 600, 450);
+        addObject(new Thumbnail(), 600, 50);
         
         pun = 0;
         vid= 10;
@@ -54,7 +55,7 @@ public class Juego extends KinectWorld
         super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false); 
         final int width = getWidth();
         final int height = getHeight();
-        Instructions i = new Instructions();
+        Instruction i = new Instruction();
         addObject(i, width/2, height/2);
         addObject(new Thumbnail(), 600, 450);
         pun = 0;
@@ -95,7 +96,7 @@ public class Juego extends KinectWorld
             usuario = new Usuario();
             usuario.setNombre(Greenfoot.ask("dame tu nombre"));
             usuario.setPuntos(getPuntos());
-            record = new Records();
+            record = new Record();
             int p = usuario.getPuntos();
             System.out.println(p);
             usuario.setPuntos(p);

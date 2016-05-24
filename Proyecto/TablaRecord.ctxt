@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=TablaRecord
+comment0.text=\r\n\ Clase\ Tabla\ records,\ se\ encarga\ de\ mostrar\ en\ pantalla\ una\ tabla\ con\ los\ records\ ordenados\ de\ menor\ a\ mayor.\r\n\r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
+comment1.params=us
+comment1.target=TablaRecord(java.util.LinkedList)
+comment1.text=Constructor\ de\ la\ clase\ aqui\ se\ inicializan\ todas\ las\ variables.\r\n\ \ \ \ @param\ us\ Lista\ de\ todos\ los\ usuarios.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Metodo\ act\ de\ la\ clase\ aqui\ se\ inserta\ la\ tabla\ y\ las\ etiquetas\ en\ orden.\r\n
+numComments=3

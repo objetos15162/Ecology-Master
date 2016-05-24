@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PUNTUACION here.
+ * Nos actualiza los records del juego.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Puntuacion extends Juego
 {
-    private Records record;// objeto del tipo record
-    private TablaRecords tabla; // objeto del tipo tabla
+    private Record record;// objeto del tipo record
+    private TablaRecord tabla; // objeto del tipo tabla
     private ButtonExit exit; // boton para regresar a menu inicial
     
     /**
@@ -21,7 +21,7 @@ public class Puntuacion extends Juego
         super(false);
         exit = new ButtonExit();
         addObject(exit,570,400);
-        record = new Records(); 
+        record = new Record(); 
     }
     
     /**
@@ -29,7 +29,7 @@ public class Puntuacion extends Juego
      */
     public void act()
     {
-        tabla = new TablaRecords(record.creaTablaRecords());
+        tabla = new TablaRecord(record.creaTablaRecords());
         addObject(tabla,0,0);
     }
 }

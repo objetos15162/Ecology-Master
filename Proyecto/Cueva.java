@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class cueva here.
+ * Donde tienen que llegar los animales para ponerlos a salvo.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
-public class Cueva extends Puntos
+public class Cueva extends Puntaje
 {
     /**
      * Act - do whatever the cueva wants to do. This method is called whenever
@@ -43,8 +43,7 @@ public class Cueva extends Puntos
     private void isTouchingAnimal()
     {
         if(isTouching(Animal.class)) {
-            setPuntosPositive(puntos++);
-            deleteAnimal();
+            deleteAnimal();            
         }
     }
     

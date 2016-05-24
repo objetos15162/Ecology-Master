@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class animal here.
+ * Nos crea los objetos animales, nos da el movimiento de estos tambien.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
-public class Animal extends Puntos
+public class Animal extends Puntaje
 {
     /**
      * Act - do whatever the animal wants to do. This method is called whenever
@@ -14,6 +14,7 @@ public class Animal extends Puntos
      */
     private int vida, puntos,x,y;
     GifImage gif ;
+    private String nombre;
     
     /**
      * Constructor
@@ -39,17 +40,13 @@ public class Animal extends Puntos
     {
         isTouchingEnemy();
         setImage(gif.getCurrentImage());
-        Juego world = (Juego)getWorld();
-        UserData[] us = world.getTrackedUsers();
-        for (UserData u : us) {
-            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-            y= derecha.getY();
-            x= derecha.getX();
+        Bosque world = (Bosque)getWorld();
         
-           if( y >= 270) {
-               setLocation(x,y);
+           if( world.getY() >= 270) {
+               setLocation(world.getX(),world.getY());
            }
-        }
+        
+        
     }    
     
     /**
@@ -72,7 +69,8 @@ public class Animal extends Puntos
             setPuntos(puntos--);
             setVida(vida-=1);
             removeTouching(Gif.class);
-            y = 480;
         }
     }
+    
+    
 }

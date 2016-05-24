@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Bosque
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ bosque\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ El\ tercer\ nivel\ del\ juego.\r\n\ Se\ regaran\ arboles,\ en\ cierto\ tiempo,\ si\ no\ se\ logra\ regar\ uno\ a\ tiempo,\ se\ te\ quita\ una\ vida.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=vida\ puntos
 comment1.target=Bosque(int,\ int)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ bosque.\r\n\ Constructor\r\n\ @param\ int\ vida\ \ \ \ recibe\ la\ vida\ del\ jugador\ del\ nivel\ anterior\r\n\ @param\ int\ puntos\ recibe\ los\ puntos\ del\ jugador\ del\ nivel\ anterior\r\n
@@ -10,4 +10,8 @@ comment2.text=\r\n\ verifica\ que\ objeto\ se\ toca\ para\ cambiar\ de\ animal\ 
 comment3.params=
 comment3.target=void\ prepare()
 comment3.text=\r\n\ prepara\ el\ mundo\ del\ nivel\r\n
-numComments=4
+comment4.params=
+comment4.target=int\ getX()
+comment5.params=
+comment5.target=int\ getY()
+numComments=6

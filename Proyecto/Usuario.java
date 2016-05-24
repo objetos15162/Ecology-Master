@@ -2,6 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  *clase usuario, esta clase permite guardar el nombre y puntuacion de un jugador
+ *
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 // puntos cariable que guarda los puntos
 // nombre variable que guarda el nombre del jugador

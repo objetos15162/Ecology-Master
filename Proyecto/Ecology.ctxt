@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Ecology
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ecology\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Objeto\ Ecology\ Master,\ que\ se\ muestra\ en\ el\ menu.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=Ecology()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ ecology\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n

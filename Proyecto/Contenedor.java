@@ -1,12 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class contenedor here.
+ * Es el contenedor para la basura.
+ * Si llega una basura, esta aumenta el puntaje.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
-public class Contenedor extends Puntos
+public class Contenedor extends Puntaje
 {
     GreenfootImage img;
     private int x , y;

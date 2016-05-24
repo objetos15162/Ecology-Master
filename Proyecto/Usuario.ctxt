@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Usuario
-comment0.text=\r\nclase\ usuario,\ esta\ clase\ permite\ guardar\ el\ nombre\ y\ puntuacion\ de\ un\ jugador\r\n
+comment0.text=\r\nclase\ usuario,\ esta\ clase\ permite\ guardar\ el\ nombre\ y\ puntuacion\ de\ un\ jugador\r\n\r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=Usuario()
 comment1.text=\r\n\ Constructor\ del\ usuario\r\n

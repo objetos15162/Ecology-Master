@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Basura
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ basura\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Nos\ muestra\ los\ objeto\ basura.\r\n\ Nos\ indica\ su\ posicion,\ y\ nos\ indica\ si\ fue\ tocado.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=nombre\ x\ y
 comment1.target=Basura(java.lang.String,\ int,\ int)
 comment1.text=\r\n\ Constructor\r\n\ @param\ nombre\ \ nombre\ de\ la\ imagen\r\n\ @param\ int\ x\ posicion\ objeto\r\n\ @param\ int\ y\ posicon\ objeto\r\n

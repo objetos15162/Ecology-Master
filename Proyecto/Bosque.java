@@ -1,16 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 /**
- * Write a description of class bosque here.
+ * El tercer nivel del juego.
+ * Se regaran arboles, en cierto tiempo, si no se logra regar uno a tiempo, se te quita una vida.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Bosque extends Juego
 {
     private Cueva c; // objeto cueva
     private int i ; //variable entera
     private String [] animal; // arreglo de animales
+    boolean flagAnimalAp,flag2 ;
+    private SimpleTimer timer;
+    private int currentMillis,x,y;
     /**
      * Constructor for objects of class bosque.
      * Constructor
@@ -22,13 +26,17 @@ public class Bosque extends Juego
         super(true);
         super.setVida(vida);
         super.setPuntos(puntos);
+        flagAnimalAp = true;
+        flag2 = true;
+        timer = new SimpleTimer();
+        currentMillis = 0;
         animal = new String [4];
         animal[0] ="chango.gif";
         animal[1] ="tortuga.gif";
         animal[2] ="leon.gif";
         animal[3] ="guajolote.gif";
         c = new Cueva("cueva.gif",getPuntos());
-        i = 0;
+        i = x = y =0;
         addObject(c,25,455);
         addObject(new Animal(getVida(),getPuntos(),animal[i]),600,455);
         prepare();
@@ -40,16 +48,75 @@ public class Bosque extends Juego
     public void act()
     {    
         super.act();
-        if(c.tocando()) {
-            i++;
-            if( i < 4) {
-                addObject(new Animal(getVida(),getPuntos(),animal[i]),600,455);
-            }
+        UserData[] us = getTrackedUsers();
+        
+        for (UserData u : us) {
+            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
+            y= derecha.getY();
+            x= derecha.getX();
         }
         
-        if( c.tocando() && i >= 4) {
+            
+            if(c.tocando() == false  && flagAnimalAp == true && i!= 0) {
+             
+            switch(i){
+                
+                case 1:
+                addObject(new Animal(getVida(),getPuntos(),"tortuga.gif"),550,400);
+                
+                break;
+                case 2:
+                addObject(new Animal(getVida(),getPuntos(),"leon.gif"),550,400);
+                
+                break;
+                case 3:
+                addObject(new Animal(getVida(),getPuntos(),"guajolote.gif"),550,400);
+                
+                break;
+                
+            }
+            
+       
+              }
+              
+              if(c.tocando() == true && i == 0){
+                flagAnimalAp = false;
+            }
+            
+            if(c.tocando() == true && i >= 1){
+            flagAnimalAp = false;
+            
+        }
+        
+        
+            if(timer.millisElapsed() > 1000 &&flagAnimalAp == false ) {
+                timer.mark();
+                if(currentMillis == 5 ){
+                    i+=1;
+                    flagAnimalAp = true;
+                    currentMillis = 0;
+                    int puntos = getPuntos();
+                    setPuntos(puntos += 1);
+                }
+                else
+                currentMillis++;
+            }
+            if(i == 3 && c.tocando() )
+            i = 4;
+            
+            if( c.tocando() && i >= 4) {
           setLvl(3);
         }
+            
+       
+           
+           /* if( i < 4 && flagAnimalAp == true) {
+                 addObject(new Animal(getVida(),getPuntos(),animal[i]),550,400);
+                 flagAnimalAp = false;
+                 
+            }*/
+        
+        
     }
     
     /**
@@ -67,5 +134,13 @@ public class Bosque extends Juego
         addObject(new Gif(enemigo[2]),100,400);
         addObject(new Gif(enemigo[3]),300,350);
         addObject(new Gif(enemigo[3]),360,400);
+    }
+    
+    public int getX(){
+        return x;
+    }
+    
+    public int getY(){
+        return y;
     }
 }

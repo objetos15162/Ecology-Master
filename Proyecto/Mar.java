@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 /**
- * Write a description of class kinectMundo here.
+ * Primer nivel del juego.
+ * En este nivel, se tiene que recoger la basura y llevarse a un contenedor.
+ * Si tocas a un pez, te quita una vida.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Mar extends Juego
 {

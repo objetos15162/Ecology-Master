@@ -1,12 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ancla here.
+ * El ancla para agarrar la basura o al pez.
+ * Sabemos que si agarra al pez nos quita vida.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
-public class Ancla extends Puntos
+public class Ancla extends Puntaje
 {
     private int x , y;
     GreenfootImage img; 

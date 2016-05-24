@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Regar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ regar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Esta\ clase,\ es\ para\ regar\ a\ los\ arboles.\r\n\ \r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=Regar()
 comment1.text=\r\n\ constructor\r\n

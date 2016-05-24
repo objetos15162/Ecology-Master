@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Selva
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ selva\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ El\ segundo\ nivel\ del\ juego,\ donde\ se\ tienen\ que\ llevar\ a\ los\ animales\ a\ la\ puerta\ para\ salvarlos.\r\n\ Habra\ cazadores,\ se\ tienen\ que\ evitar.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=vida\ puntos
 comment1.target=Selva(int,\ int)
 comment1.text=\r\n\ @param\ int\ vida\ ,\ recibe\ la\ vida\ del\ jugador\ del\ nivel\ anterior\r\n\ @param\ int\ puntos\ ,\ recibe\ los\ puntos\ del\ jugador\ del\ nivel\ anterior\r\n

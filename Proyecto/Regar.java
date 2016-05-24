@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class regar here.
+ * Esta clase, es para regar a los arboles.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class Regar extends Actor
 {

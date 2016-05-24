@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Animal
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ animal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Nos\ crea\ los\ objetos\ animales,\ nos\ da\ el\ movimiento\ de\ estos\ tambien.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=vida\ puntos\ nombre
 comment1.target=Animal(int,\ int,\ java.lang.String)
 comment1.text=\r\n\ Constructor\r\n\ @param\ int\ vida\r\n\ @param\ int\ puntos\r\n\ @param\ String\ nombre\r\n\ recibe\ vida\ y\ puntos\ del\ jugador\ para\ modificarlos\ \r\n\ y\ recibe\ el\ nombre\ de\ la\ imagen\r\n
