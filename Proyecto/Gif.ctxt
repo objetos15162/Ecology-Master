@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Gif
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ tesoro\ here.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
+comment0.text=\r\n\ Esta\ clase\ es\ para\ cargar\ las\ imagenes\ gif.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=nombre
 comment1.target=Gif(java.lang.String)
 comment1.text=\r\n\ @Param\ String\ nombre\r\n\ Recibe\ el\ nombrede\ la\ imagen\ tipo\ gif\r\n

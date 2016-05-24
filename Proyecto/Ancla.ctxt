@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Ancla
-comment0.text=\r\n\ El\ ancla\ para\ agarrar\ la\ basura\ o\ al\ pez.\r\n\ \r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
+comment0.text=\r\n\ El\ ancla\ para\ agarrar\ la\ basura\ o\ al\ pez.\r\n\ Sabemos\ que\ si\ agarra\ al\ pez\ nos\ quita\ vida.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
 comment1.params=
 comment1.target=Ancla()
 comment1.text=\r\n\ constructor\r\n

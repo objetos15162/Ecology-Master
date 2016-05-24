@@ -94,7 +94,7 @@ public class Juego extends KinectWorld
             
         if(vid <= 0  || lvl == 4 ) {
             usuario = new Usuario();
-            usuario.setNombre(Greenfoot.ask("dame tu nombre"));
+            usuario.setNombre(Greenfoot.ask("Dame tu nombre"));
             usuario.setPuntos(getPuntos());
             record = new Record();
             int p = usuario.getPuntos();
