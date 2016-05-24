@@ -36,7 +36,7 @@ public class Juego extends KinectWorld
         addObject(new Thumbnail(), 600, 50);
         
         pun = 0;
-        vid= 10;
+        vid= 100;
         if(flag) {
             vida = new Counter("VIDA : ");
             puntuacion = new Counter("Puntos: ");
@@ -94,7 +94,7 @@ public class Juego extends KinectWorld
             
         if(vid <= 0  || lvl == 4 ) {
             usuario = new Usuario();
-            usuario.setNombre(Greenfoot.ask("Dame tu nombre"));
+            usuario.setNombre(Greenfoot.ask("dame tu nombre"));
             usuario.setPuntos(getPuntos());
             record = new Record();
             int p = usuario.getPuntos();

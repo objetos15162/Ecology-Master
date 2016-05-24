@@ -35,7 +35,7 @@ public class Mar extends Juego
         super.act();
         setVida(getVida()); 
         setPuntos(getPuntos());
-        if(getPuntos() >= 10 ) {
+        if(getPuntos() >= 25 ) {
             setLvl(2);
         }
     }
