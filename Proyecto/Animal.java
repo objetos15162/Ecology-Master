@@ -22,7 +22,7 @@ public class Animal extends Player
      * recibe vida y puntos del jugador para modificarlos 
      * y recibe el nombre de la imagen
      */
-    private int Vida, Puntos;
+    private int Vida,Puntos;
     private GifImage gifAnimal ;
     private String nombre;
     

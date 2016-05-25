@@ -12,7 +12,6 @@ public class Basura extends Player
     
    
     private boolean tocandoAncla; // bandera
-    private boolean flagContenedor; // bandera Contenedor
     /**
      * Constructor
      * @param nombre  nombre de la imagen

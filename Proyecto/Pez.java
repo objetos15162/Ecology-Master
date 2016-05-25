@@ -25,8 +25,8 @@ public class Pez extends Actor
      */
     public Pez(int x , int y , String Nombre , int Velocidad , boolean DireccionIzqDer)
     {
-        this.xPos = x;
-        this.yPos = y;
+        xPos = x;
+        yPos = y;
         this.Nombre = Nombre;
         this.Velocidad = Velocidad;
         this.DireccionIzqDer = DireccionIzqDer;

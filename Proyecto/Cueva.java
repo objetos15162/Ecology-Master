@@ -16,7 +16,6 @@ public class Cueva extends Player
        /**
         * constructor
         * @param nombre
-        * @param Puntuacion
         * 
         * Recibe el nombre de la imagen y la cantidad de Puntuacion del usuario
         */

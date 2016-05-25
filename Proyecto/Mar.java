@@ -12,7 +12,6 @@ public class Mar extends Juego
 {
     private Ancla Ancla ; // objeto ancla
     private Barco Barco ;// objeto barco
-    private int puntosPersonaje; // variables para modificar movimiento de misobjetos
     private Contenedor Contenedor; // variable contenedor
     
     /**
@@ -23,7 +22,6 @@ public class Mar extends Juego
     { 
          super(true);        
          setVida(10);
-         puntosPersonaje=0;
          prepare();
     }
    
