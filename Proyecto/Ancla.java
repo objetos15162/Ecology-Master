@@ -11,7 +11,7 @@ public class Ancla extends Player
 {
     
     
-    private boolean flagPez;
+    
     private int Vida;
     private boolean flagBasura, flagContenedor;
     
@@ -21,7 +21,7 @@ public class Ancla extends Player
     public Ancla ()
     {
         super("ancla.png");
-        flagBasura = flagPez = false;
+        flagBasura =  false;
         Vida = 10;
     }
     
