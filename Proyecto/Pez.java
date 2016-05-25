@@ -9,28 +9,28 @@ import java.lang.Math.*;
  */
 public class Pez extends Actor
 {
-    private int x;
-    private int y;
-    private String nombre;
-    private int velocidad;
-    private boolean direccion;
-    private GreenfootImage img ;
+    private int xPos; // PERMITE AL PEZ MOVERSE EN EL EJE X!!!!!!!!!!!!!!!!
+    private int yPos; // PERMITE AL PEZ MOVERESE EN EL EJE Y!!!!!!!!!!!!
+    private String Nombre;// TOMA EL Nombre DE LA IMAGEN 
+    private int Velocidad; // Velocidad DE MI PEX
+    private boolean DireccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
+    private GreenfootImage ImgPez ;
     
     /**
      * @param int x posicion x
      * @param int y posicion y
-     * @param String nombre nombre de la imagen
-     * @param int velocidad velocidad del pez
-     * @param boolean direccion bander que nos indica la direccion del pez
+     * @param String Nombre Nombre de la imagen
+     * @param int Velocidad Velocidad del pez
+     * @param boolean DireccionIzqDer bander que nos indica la DireccionIzqDer del pez
      */
-    public Pez(int x , int y , String nombre , int velocidad , boolean direccion)
+    public Pez(int x , int y , String Nombre , int Velocidad , boolean DireccionIzqDer)
     {
-        this.x = x;
-        this.y = y;
-        this.nombre = nombre;
-        this.velocidad = velocidad;
-        this.direccion = direccion;
-        cargarImagen(nombre);
+        this.xPos = x;
+        this.yPos = y;
+        this.Nombre = Nombre;
+        this.Velocidad = Velocidad;
+        this.DireccionIzqDer = DireccionIzqDer;
+        cargarImagen(Nombre);
     }
     
     /**
@@ -49,54 +49,54 @@ public class Pez extends Actor
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(x <= mi_mundo.getWidth() - img.getWidth() && direccion) {
-            x+=velocidad;
+        if(xPos <= mi_mundo.getWidth() - ImgPez.getWidth() && DireccionIzqDer) {
+            xPos+=Velocidad;
         }
         
-        if(x >= img.getWidth() && !direccion) {
-            x-=velocidad;
+        if(xPos >= ImgPez.getWidth() && !DireccionIzqDer) {
+            xPos-=Velocidad;
         }
         
-        if(x >= mi_mundo.getWidth() - img.getWidth() && direccion) {
+        if(xPos >= mi_mundo.getWidth() - ImgPez.getWidth() && DireccionIzqDer) {
            reiniciarPez();
         }
            
-        if(x  <= img.getWidth()  && !direccion) {
+        if(xPos  <= ImgPez.getWidth()  && !DireccionIzqDer) {
             reiniciarPez();
         }
-        setLocation(x,y);
+        setLocation(xPos,yPos);
     }
     
     /**
-    * metodo para desaparecer pez y cambiar direccion
+    * metodo para desaparecer pez y cambiar DireccionIzqDer
     */
     public void reiniciarPez()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(direccion) {
-            x = img.getWidth();
+        if(DireccionIzqDer) {
+            xPos = ImgPez.getWidth();
         }
         else {
-            x = mi_mundo.getWidth() - img.getWidth();
+            xPos = mi_mundo.getWidth() - ImgPez.getWidth();
         }
      
-        img.setTransparency(0);
-        y=(int)(Math.random()*250+200);
-        velocidad = mi_mundo.generar(7);
-        img.setTransparency(255);
+        ImgPez.setTransparency(0);
+        yPos=(int)(Math.random()*250+200);
+        Velocidad = mi_mundo.generarAleatorio(7);
+        ImgPez.setTransparency(255);
     }
     
     /**
-     * @param Strin nombre  recibe el nombre de la imagen
+     * @param Strin Nombre  recibe el Nombre de la imagen
      * metodo para cargar imagen del pez
      * 
      */
-    public void cargarImagen(String nombre)
+    public void cargarImagen(String Nombre)
     {
-        img = new GreenfootImage(nombre);
-        setImage(img);
-        img.scale(30,20);
+        ImgPez = new GreenfootImage(Nombre);
+        setImage(ImgPez);
+        ImgPez.scale(30,20);
     }
 }

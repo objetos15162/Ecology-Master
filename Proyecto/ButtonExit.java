@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class ButtonExit extends Actor
+public class ButtonExit extends Button
 {
     /**
      * Act - do whatever the ButtonExit wants to do. This method is called whenever
@@ -14,6 +14,7 @@ public class ButtonExit extends Actor
      */
     public ButtonExit()
     {
+        super();
     }
     
     /**
@@ -21,8 +22,8 @@ public class ButtonExit extends Actor
      */
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new Menu());
+        if(isClicked()){
+           Greenfoot.setWorld(new Menu());
         }
     }    
 }

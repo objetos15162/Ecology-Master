@@ -7,19 +7,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class ButtonRecord extends Actor
+public class ButtonRecord extends Button
 {
     /**
      * Lleva al menu de puntuacion
      */
     public ButtonRecord()
     {
+        super();
     }
     
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new Puntuacion());
+        if(isClicked()){
+          Greenfoot.setWorld(new Puntuacion());  
         }
     }    
 }

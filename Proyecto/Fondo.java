@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Fondo extends Actor
+public class Fondo extends FondosJuego
 {
     
-    private String nombre ; // variable que guarda el nombre del fondo
+    
     
     /**
      * Constructor
@@ -17,7 +17,7 @@ public class Fondo extends Actor
      */
     public Fondo(String nombre)
     {
-        this.nombre = nombre;    
+        super(nombre);  
     }
     
     /**
@@ -25,8 +25,7 @@ public class Fondo extends Actor
      */
     public void act() 
     {
-       GreenfootImage img = new GreenfootImage(nombre);
-       setImage(img);      
-       img.scale(4000,100);
+        super.act();
+        scaleImg(4000,100);
     }    
 }

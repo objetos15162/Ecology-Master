@@ -11,7 +11,7 @@ public class Instruction  extends Actor
     private GreenfootImage begin;
     private GreenfootImage blank;
     private GreenfootImage calibrating;    
-    private boolean flag;
+    private boolean Calibracion;
     
     /**
      * @Param World world recibe mi objeto mundo
@@ -25,7 +25,7 @@ public class Instruction  extends Actor
         calibrating.scale(world.getWidth(), world.getHeight());
         blank = new GreenfootImage(1, 1);
         setImage(blank);
-        flag = false;
+        Calibracion = false;
     }
 
     /**
@@ -42,24 +42,20 @@ public class Instruction  extends Actor
             calibratingAny = calibratingAny || u.isCalibrating();
         }
         
-        if (us.length > 0 && !trackingAny && ! calibratingAny) {
-            //setImage(begin);   
-        }
-        else if (us.length > 0 && !trackingAny && calibratingAny) {
-            //setImage(calibrating);
-        }
+        if (us.length > 0 && !trackingAny && ! calibratingAny);
+        else if (us.length > 0 && !trackingAny && calibratingAny);
         else {
-            //setImage(blank);
-            flag = true;
+            
+            Calibracion = true;
         }
     }   
     
     /**
-     * @return boolean flag  bandera para saber si kinect quedo calibrado
+     * @return boolean Calibracion  bandera para saber si kinect quedo calibrado
      * metodo para saber si el kinect esta calibrado
      */
-    public boolean getFlag()
+    public boolean getCalibracion()
     {
-        return flag;
+        return Calibracion;
     }
 }

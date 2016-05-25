@@ -7,18 +7,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class ButtonHelp extends Actor
+public class ButtonHelp extends Button
 {
     /**
      * RNos lleva al menu de ayuda
      */
     public ButtonHelp()
     {
+        super();
     }
     
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this)) {
+        
+         if(isClicked()){
             Greenfoot.setWorld(new Ayuda());
         }
     }    

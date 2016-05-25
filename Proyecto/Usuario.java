@@ -1,26 +1,26 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- *clase usuario, esta clase permite guardar el nombre y puntuacion de un jugador
+ *clase usuario, esta clase permite guardar el nombreJugador y puntuacion de un jugador
  *
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-// puntos cariable que guarda los puntos
-// nombre variable que guarda el nombre del jugador
+// PuntuacionJugador cariable que guarda los PuntuacionJugador
+// nombreJugador variable que guarda el nombreJugador del jugador
 
 public  class Usuario extends Actor
 {
-    private int puntos; // variable entera para guardar puntos
-    private String nombre; // variable String recibe el nombre del jugador
+    private int PuntuacionJugador; // variable entera para guardar PuntuacionJugador
+    private String nombreJugador; // variable String recibe el nombreJugador del jugador
 
     /**
      * Constructor del usuario
      */
     public Usuario()
     {
-        puntos = 0;
-        nombre = "";
+        PuntuacionJugador = 0;
+        nombreJugador = "";
     }
     
     /** siempre inicializa las variables para que no existan errores
@@ -28,43 +28,43 @@ public  class Usuario extends Actor
      */
     public void act() 
     {
-       nombre="";
-       puntos=0;
+       nombreJugador="";
+       PuntuacionJugador=0;
     }    
     
     /**
      * @Param String n  
-     * Cambia el nombre del jugador
+     * Cambia el nombreJugador del jugador
      */
-    public void setNombre(String n)
+    public void setnombreJugador(String n)
     {
-        nombre=n;
+        nombreJugador=n;
     }
     
     /**
      * @Param int p  
      * Cambia la puntuacion del jugador
      */
-    public void setPuntos(int p)
+    public void setPuntuacionJugador(int puntuacion)
     {
-        puntos=p;
+        PuntuacionJugador=puntuacion;
     }
     
     /**
-     * @return nombre
-     * Regresa el nombre del jugador
+     * @return nombreJugador
+     * Regresa el nombreJugador del jugador
      */
-    public String getNombre()
+    public String getnombreJugador()
     {
-        return nombre;
+        return nombreJugador;
     }
     
     /**
-     * @return puntos
-     * Regresa los puntos del jugador
+     * @return PuntuacionJugador
+     * Regresa los PuntuacionJugador del jugador
      */
-    public int getPuntos()
+    public int getPuntuacionJugador()
     {
-        return puntos;
+        return PuntuacionJugador;
     }    
 }

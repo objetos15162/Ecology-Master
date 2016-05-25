@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Pez
 comment0.text=\r\n\ Esta\ clase\ nos\ muestra\ los\ peces.\r\n\ Le\ da\ el\ movimiento\ a\ los\ peces.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
-comment1.params=x\ y\ nombre\ velocidad\ direccion
+comment1.params=x\ y\ Nombre\ Velocidad\ DireccionIzqDer
 comment1.target=Pez(int,\ int,\ java.lang.String,\ int,\ boolean)
-comment1.text=\r\n\ @param\ int\ x\ posicion\ x\r\n\ @param\ int\ y\ posicion\ y\r\n\ @param\ String\ nombre\ nombre\ de\ la\ imagen\r\n\ @param\ int\ velocidad\ velocidad\ del\ pez\r\n\ @param\ boolean\ direccion\ bander\ que\ nos\ indica\ la\ direccion\ del\ pez\r\n
+comment1.text=\r\n\ @param\ int\ x\ posicion\ x\r\n\ @param\ int\ y\ posicion\ y\r\n\ @param\ String\ Nombre\ Nombre\ de\ la\ imagen\r\n\ @param\ int\ Velocidad\ Velocidad\ del\ pez\r\n\ @param\ boolean\ DireccionIzqDer\ bander\ que\ nos\ indica\ la\ DireccionIzqDer\ del\ pez\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ mueve\ a\ los\ peces\r\n
@@ -12,8 +12,8 @@ comment3.target=void\ mover()
 comment3.text=\r\n\ Metodo\ para\ mover\ a\ mi\ pez\ dentro\ del\ mundo\r\n
 comment4.params=
 comment4.target=void\ reiniciarPez()
-comment4.text=\r\n\ metodo\ para\ desaparecer\ pez\ y\ cambiar\ direccion\r\n
-comment5.params=nombre
+comment4.text=\r\n\ metodo\ para\ desaparecer\ pez\ y\ cambiar\ DireccionIzqDer\r\n
+comment5.params=Nombre
 comment5.target=void\ cargarImagen(java.lang.String)
-comment5.text=\r\n\ @param\ Strin\ nombre\ \ recibe\ el\ nombre\ de\ la\ imagen\r\n\ metodo\ para\ cargar\ imagen\ del\ pez\r\n\ \r\n
+comment5.text=\r\n\ @param\ Strin\ Nombre\ \ recibe\ el\ Nombre\ de\ la\ imagen\r\n\ metodo\ para\ cargar\ imagen\ del\ pez\r\n\ \r\n
 numComments=6

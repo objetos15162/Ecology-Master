@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class FondoOceano extends Actor
+public class FondoOceano extends FondosJuego
 {
     /**
      * Act - do whatever the fondooceano wants to do. This method is called whenever
@@ -14,6 +14,7 @@ public class FondoOceano extends Actor
      */
     public FondoOceano()
     {
+        super("fondo.jpg");
     }
     
     /**
@@ -21,8 +22,7 @@ public class FondoOceano extends Actor
      */
     public void act() 
     {
-       GreenfootImage img = new GreenfootImage("fondo.jpg");     
-       setImage(img); 
-       img.scale(1100,590);
+        super.act();
+        scaleImg(1100,590);
     }    
 }

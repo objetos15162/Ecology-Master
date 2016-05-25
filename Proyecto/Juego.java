@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Nos cambiara de nivel, al que queremos avanzar.
- * Nos gardara los puntos
+ * Nos gardara los puntuaciontos
  * 
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
@@ -11,20 +11,20 @@ public class Juego extends KinectWorld
 {
     private static final int THUMBNAIL_WIDTH = 80; // ancho
     private static final int THUMBNAIL_HEIGHT = 60; // alto
-    private Counter puntuacion; // contador de puntuacion
+    private Counter puntuacion; // contador de puntuaciontuacion
     private Counter vida; // contador de vida
-    private int pun , vid,lvl; // variables privadas  para puntuacion vida y nivel
+    private int puntos, vidaJugador,lvl; // variables privadas  para puntuaciontuacion vida y nivel
     private String nombre; // agrega el nombre del jugador
-    private Usuario usuario; // guarda todos los datos del jugador
+    private Usuario Usuario; // guarda todos los datos del jugador
     private Record record; // objeto para actualizar los records
-    private Instruction i; // objeto que nos permite detectar usuario kinect
+    private Instruction i; // objeto que nos permite detectar Usuario kinect
     
     /**
      * Constructor for objects of class JUEGO.
-     * @param int lvl boolean flag
-     * Constructor de juego recibe el nivel y si quiere que aparezca las puntuaciones y la vida
+     * @param int lvl boolean muestraPuntuacion
+     * Constructor de juego recibe el nivel y si quiere que aparezca las puntuaciontuaciones y la vida
      */
-    public Juego(int lvl , boolean flag)
+    public Juego(int lvl , boolean muestraPuntuacion)
     {
         
         super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false); 
@@ -35,11 +35,11 @@ public class Juego extends KinectWorld
         addObject(i, width/2, height/2);
         addObject(new Thumbnail(), 600, 50);
         
-        pun = 0;
-        vid= 100;
-        if(flag) {
+        puntos = 0;
+        vidaJugador= 10;
+        if(muestraPuntuacion) {
             vida = new Counter("VIDA : ");
-            puntuacion = new Counter("Puntos: ");
+            puntuacion = new Counter("puntuacion: ");
             addObject(puntuacion,200,25);
             addObject(vida,50,25);
         }     
@@ -47,10 +47,10 @@ public class Juego extends KinectWorld
     
     /**
      * Constructor for objects of class JUEGO.
-     * @param  boolean flag
-     * Constructor de juego recibe si quiere que aparezca las puntuaciones y la vida
+     * @param  boolean muestraPuntuacion
+     * Constructor de juego recibe si quiere que aparezca las puntuaciontuaciones y la vida
      */
-    public Juego(boolean flag)
+    public Juego(boolean muestraPuntuacion)
     {    
         super(THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, 1.0, false); 
         final int width = getWidth();
@@ -58,11 +58,11 @@ public class Juego extends KinectWorld
         Instruction i = new Instruction();
         addObject(i, width/2, height/2);
         addObject(new Thumbnail(), 600, 450);
-        pun = 0;
-        vid= 10;
-        if(flag) {
+        puntos = 0;
+        vidaJugador= 10;
+        if(muestraPuntuacion) {
             vida = new Counter("VIDA : ");
-            puntuacion = new Counter("Puntos: ");
+            puntuacion = new Counter("puntuacion: ");
             addObject(puntuacion,200,25);
             addObject(vida,50,25);
         }
@@ -70,7 +70,7 @@ public class Juego extends KinectWorld
     
     /**
      * Verifica el nivel en el que estemos y el nivel que queremos cambiar
-     * y ademas termina el juego y modifica la puntuacion
+     * y ademas termina el juego y modifica la puntuaciontuacion
      */
     public void act()
     {
@@ -92,15 +92,15 @@ public class Juego extends KinectWorld
             Greenfoot.setWorld(s);
         }
             
-        if(vid <= 0  || lvl == 4 ) {
-            usuario = new Usuario();
-            usuario.setNombre(Greenfoot.ask("dame tu nombre"));
-            usuario.setPuntos(getPuntos());
+        if(vidaJugador <= 0  || lvl == 4 ) {
+            Usuario = new Usuario();
+            Usuario.setnombreJugador(Greenfoot.ask("dame tu nombre"));
+            Usuario.setPuntuacionJugador(getPuntos());
             record = new Record();
-            int p = usuario.getPuntos();
-            System.out.println(p);
-            usuario.setPuntos(p);
-            record.addUsuario(usuario);
+            int pts = Usuario.getPuntuacionJugador();
+            System.out.println(pts);
+            Usuario.setPuntuacionJugador(pts);
+            record.addUsuario(Usuario);
             Greenfoot.setWorld(new Menu());
                
         }
@@ -110,19 +110,19 @@ public class Juego extends KinectWorld
     * @param int v
     * Modifica la vida del jugador
     */
-    public void setVida(int v)
+    public void setVida(int vidaJ)
     {   
-        vid = v;
+        vidaJugador = vidaJ;
     }
     
     /**
      * param  int p 
      * Modifica los puntos del jugador
      */
-    public void setPuntos(int p)
+    public void setPuntos(int puntuacion)
     {
-        if(p>=0) {
-            pun = p;
+        if(puntuacion >= 0) {
+            puntos = puntuacion;
         }
     }
     
@@ -132,7 +132,7 @@ public class Juego extends KinectWorld
      */
     public int getPuntos()
     {
-        return pun;
+        return puntos;
     }
     
     /**
@@ -141,7 +141,7 @@ public class Juego extends KinectWorld
      */
     public int getVida()
     {
-        return vid;
+        return vidaJugador;
     }
     
     /**

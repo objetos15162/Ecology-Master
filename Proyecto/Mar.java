@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 public class Mar extends Juego
 {
-    private Ancla a ; // objeto ancla
-    private Barco b ;// objeto barco
-    private int x,y,puntos; // variables para modificar movimiento de misobjetos
-    private Contenedor con; // variable contenedor
+    private Ancla Ancla ; // objeto ancla
+    private Barco Barco ;// objeto barco
+    private int puntosPersonaje; // variables para modificar movimiento de misobjetos
+    private Contenedor Contenedor; // variable contenedor
     
     /**
      * Constructor for objects of class selva.
@@ -23,7 +23,7 @@ public class Mar extends Juego
     { 
          super(true);        
          setVida(10);
-         x=y=puntos=0;
+         puntosPersonaje=0;
          prepare();
     }
    
@@ -47,7 +47,7 @@ public class Mar extends Juego
     */   
     public int getAnclaLocationX()
     {
-        return a.getX();
+        return Ancla.getX();
     }
     
     /**
@@ -57,19 +57,10 @@ public class Mar extends Juego
     */ 
     public int getAnclaLocationY()
     {
-        return a.getY();
+        return Ancla.getY();
     }  
     
-    /**
-    * @param Actor name
-    * @param int xPosition
-    * @param int yPosition
-    * metodo utilizazdo para posicionar mas rapido a mis objeto
-    */ 
-    private void posicionar(Actor name,int x , int y )
-    {
-        addObject(name,x,y);
-    }
+   
     
     /**
     * @param int number
@@ -77,19 +68,12 @@ public class Mar extends Juego
     * 
     * Utilizada para la generacion de numeros aleatorios
     */
-    public int generar(int number)
+    public int generarAleatorio(int number)
     {
         return Greenfoot.getRandomNumber(number)+1;
     }
     
-    /**
-    * Metodo para generar posiciones aleatorias de posicion x y y de objetos especificos
-    */
-    private void generar()
-    {
-        x = (int)(Math.random()*500+100);
-        y = (int)(Math.random()*250+200);
-    }
+    
     
     /**
      * Metodo que agrega a todos los objetos en mi mundo
@@ -98,32 +82,46 @@ public class Mar extends Juego
      {
         String nombres[] = {"Pez.png","pez2.png","pez6.png","pez3.png","pez4.png","tiburon.png",
                     "pezz5.png","lata1.png","petroleo.png"};
-        b = new Barco();
-        a = new Ancla();
-        con = new Contenedor();
-        posicionar(new Fondo("olas.png"),0,120);
-        posicionar(new FondoOceano(),100,320);
-        posicionar(b,getWidth()/2,100);
+        Barco = new Barco();
+        Ancla = new Ancla();
+        Contenedor = new Contenedor();
+        posicionarObj(new Fondo("olas.png"),0,120);
+        posicionarObj(new FondoOceano(),100,320);
+        posicionarObj(Barco,getWidth()/2,100);
         for(int i = 0 ; i < 3 ;i++) {
-            posicionar(new Pez(generar(400),200,nombres[i],generar(3),true),generar(400),400);
+            posicionarObj(new Pez(generarAleatorio(400),200,nombres[i],generarAleatorio(3),true),
+            generarAleatorio(400),400);
         }
         
         for(int i = 3 ; i < 7 ;i ++) {
-            posicionar(new Pez(generar(400),300,nombres[i],generar(3),false),generar(400),400);
+            posicionarObj(new Pez(generarAleatorio(400),300,nombres[i],generarAleatorio(3),false),
+            generarAleatorio(400),400);
         }
         
         for(int i = 0 ; i < 10; i++) {
-            generar();
             if(i < 5) {
-                posicionar(new Basura(nombres[7],x,y),x,y);
+                posicionarObj(new Basura(nombres[7],(int)(Math.random()*500+100),
+                (int)(Math.random()*250+200)),(int)(Math.random()*500+100),(int)(Math.random()*250+200));
             }
             else {
-                posicionar(new Basura(nombres[8],x,y),x,y); 
+                posicionarObj(new Basura(nombres[8],(int)(Math.random()*500+100),
+                (int)(Math.random()*250+200)),(int)(Math.random()*500+100),(int)(Math.random()*250+200)); 
             }
         }
-        posicionar(a,getWidth()/2,300);
-        posicionar(new Gif("tesoro.gif"),30,390);
-        posicionar(new Gif("tesoro.gif"),200,450);
-        posicionar(con,600,100);
+        posicionarObj(Ancla,getWidth()/2,300);
+        posicionarObj(new Gif("tesoro.gif"),30,390);
+        posicionarObj(new Gif("tesoro.gif"),200,450);
+        posicionarObj(Contenedor,600,100);
+    }
+    
+     /**
+    * @param Actor name
+    * @param int xPosition
+    * @param int yPosition
+    * metodo utilizazdo para posicionar mas rapido a mis objeto
+    */ 
+    private void posicionarObj(Actor name,int x , int y )
+    {
+        addObject(name,x,y);
     }
 }

@@ -8,31 +8,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Planta extends Puntaje
+public class Planta extends Player
 {
-    private GreenfootImage [] arbol ;
-    private int currentMillis,currentMillis2,currentMillis3,currentMillis4,currentMillis5;
-    private SimpleTimer timer,timer1;
+    private GreenfootImage [] arbolSprite ;
+    private int timeSprite,timeSprite2,timeSprite3,timeSprite4,timeSprite5;
+    private SimpleTimer timerPlant,timerKill;
     private boolean  banderaPuntos;
-    private int contador;
+    private int Contador;
     
     /**
      * Constructor
      */
     public Planta( )
     {    
-        arbol = new GreenfootImage [5];
+        super();
+        arbolSprite = new GreenfootImage [5];
         String nombres[] = {"arbol1.png","arbol1.1.png","arbol1.2.png","arbol1.3.png","arbol1.4.png"};
         
         for(int i = 0 ; i < 5 ; i++) {
-           arbol[i] = new GreenfootImage(nombres[i]);
+           arbolSprite[i] = new GreenfootImage(nombres[i]);
         }
         
-        contador = 0;
-        currentMillis = 0;
-        timer = new SimpleTimer();
-        timer1 = new SimpleTimer();
-        setImage(arbol[4]);
+        Contador = 0;
+        timeSprite = timeSprite2 = timeSprite3 = 
+        timeSprite4 = timeSprite5 = 0;
+        timerPlant = timerKill = new SimpleTimer();
+        setImage(arbolSprite[4]);
         banderaPuntos = false;
     }
     
@@ -42,10 +43,11 @@ public class Planta extends Puntaje
      */
     public void act() 
     {
+        
         if(isTouching(Regar.class)) {
-            if(timer.millisElapsed() > 1000) {
-                timer.mark();
-                  if(currentMillis == 1) {
+            if(timerPlant.millisElapsed() > 1000) {
+                timerPlant.mark();
+                  if(timeSprite == 1) {
                     check(1);
                     recet('1');
                     
@@ -54,7 +56,7 @@ public class Planta extends Puntaje
                     incrementa('1');
                 }
                    
-                if(currentMillis2 == 2) {
+                if(timeSprite2 == 2) {
                     check(2);
                     recet('2');
                 }
@@ -62,14 +64,14 @@ public class Planta extends Puntaje
                    incrementa('2');
                 }
 
-                if(currentMillis3 == 3) {
+                if(timeSprite3 == 3) {
                     check(3);
                     recet('3');}
                 else {
                    incrementa('3');
                 }
                 
-                if(currentMillis4 == 4) {
+                if(timeSprite4 == 4) {
                    check(4);
                    recet('4');
                 }
@@ -79,9 +81,9 @@ public class Planta extends Puntaje
             }
         }
         
-        if(timer1.millisElapsed() > 1000) {
-            timer1.mark();
-            if(currentMillis5 == 8 ){
+        if(timerKill.millisElapsed() > 1000) {
+            timerKill.mark();
+            if(timeSprite5 == 8 ){
                     check(5);
                     recet('5');
             }
@@ -93,34 +95,34 @@ public class Planta extends Puntaje
     
     /**
      * @return int
-     * obtiene el contador de plantas que han adquirido el tamaño ideal
+     * obtiene el Contador de plantas que han adquirido el tamaño ideal
      */
     public int getContador()
     {
-        return contador;
+        return Contador;
     }
     
     public void check(int time){
         switch(time){
             case 1:
-                if(getImage() == arbol[4]) 
-                    setImage(arbol[3]);
+                if(getImage() == arbolSprite[4]) 
+                    setImage(arbolSprite[3]);
                     
-            break;
+                    break;
             case 2:
-                if(getImage() == arbol[3]) 
-                     setImage(arbol[2]);
-            break;
+                if(getImage() == arbolSprite[3]) 
+                     setImage(arbolSprite[2]);
+                     break;
             case 3:
-                if(getImage() == arbol[2]) 
-                        setImage(arbol[1]);
+                if(getImage() == arbolSprite[2]) 
+                        setImage(arbolSprite[1]);
                     
-            break;
+                        break;
             case 4:
-                if(getImage() == arbol[1]) {
-                        setImage(arbol[0]);
+                if(getImage() == arbolSprite[1]) {
+                        setImage(arbolSprite[0]);
                         banderaPuntos = true;
-                        contador++;
+                        Contador++;
                     }
             
                 if(banderaPuntos) {
@@ -128,14 +130,15 @@ public class Planta extends Puntaje
                         banderaPuntos = false;
                     }
             
-            break;
+                    break;
             case 5:
-                    if(getImage() != arbol[0] && isTouching(Regar.class) != true && getImage() != arbol[4]) {
-                    setImage(arbol[4]);
-                    setPuntos( getPuntos());
+                    if(getImage() != arbolSprite[0] && !isTouching(Regar.class)  
+                      && getImage() != arbolSprite[4]) {
+                    setImage(arbolSprite[4]);
+                    setPuntos(getPuntos());
                 }
             
-            break;
+                break;
             
             
         }
@@ -147,19 +150,19 @@ public class Planta extends Puntaje
         
         switch(op){
             case '1':
-            currentMillis++;
+            timeSprite++;
             break;
             case '2':
-            currentMillis2++;
+            timeSprite2++;
             break;
             case '3':
-            currentMillis3++;
+            timeSprite3++;
             break;
             case '4':
-            currentMillis4++;
+            timeSprite4++;
             break;
             case '5':
-            currentMillis5++;
+            timeSprite5++;
             break;
             
             
@@ -171,19 +174,19 @@ public class Planta extends Puntaje
     public void recet(char op){
         switch(op){
             case '1':
-            currentMillis=0;
+            timeSprite=0;
             break;
             case '2':
-            currentMillis2=0;
+            timeSprite2=0;
             break;
             case '3':
-            currentMillis3=0;
+            timeSprite3=0;
             break;
             case '4':
-            currentMillis4=0;
+            timeSprite4=0;
             break;
             case '5':
-            currentMillis5=0;
+            timeSprite5=0;
             break;
             
             
@@ -192,7 +195,7 @@ public class Planta extends Puntaje
     
     public boolean check (){
         
-       if(currentMillis5 == 8)
+       if(timeSprite5 == 8)
        return true;
        else
        return false;

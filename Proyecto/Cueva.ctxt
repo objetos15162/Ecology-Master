@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Cueva
 comment0.text=\r\n\ Donde\ tienen\ que\ llegar\ los\ animales\ para\ ponerlos\ a\ salvo.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
-comment1.params=nombre\ puntos
-comment1.target=Cueva(java.lang.String,\ int)
-comment1.text=\r\n\ constructor\r\n\ @param\ nombre\r\n\ @param\ puntos\r\n\ \r\n\ Recibe\ el\ nombre\ de\ la\ imagen\ y\ la\ cantidad\ de\ puntos\ del\ usuario\r\n
+comment1.params=nombre
+comment1.target=Cueva(java.lang.String)
+comment1.text=\r\n\ constructor\r\n\ @param\ nombre\r\n\ @param\ Puntuacion\r\n\ \r\n\ Recibe\ el\ nombre\ de\ la\ imagen\ y\ la\ cantidad\ de\ Puntuacion\ del\ usuario\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ verifica\ si\ toca\ un\ animal\r\n\ y\ agrega\ imagen\r\n

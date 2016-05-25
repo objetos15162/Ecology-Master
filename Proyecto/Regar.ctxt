@@ -7,4 +7,6 @@ comment1.text=\r\n\ constructor\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Detecta\ los\ movimientos\ de\ mi\ usuario\r\n\ para\ cambiar\ la\ localizazcion\ de\ mi\ imagen\r\n
-numComments=3
+comment3.params=
+comment3.target=void\ checking()
+numComments=4

@@ -1,19 +1,19 @@
 #BlueJ class context
 comment0.target=Juego
-comment0.text=\r\n\ Nos\ cambiara\ de\ nivel,\ al\ que\ queremos\ avanzar.\r\n\ Nos\ gardara\ los\ puntos\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
-comment1.params=lvl\ flag
+comment0.text=\r\n\ Nos\ cambiara\ de\ nivel,\ al\ que\ queremos\ avanzar.\r\n\ Nos\ gardara\ los\ puntuaciontos\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
+comment1.params=lvl\ muestraPuntuacion
 comment1.target=Juego(int,\ boolean)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ JUEGO.\r\n\ @param\ int\ lvl\ boolean\ flag\r\n\ Constructor\ de\ juego\ recibe\ el\ nivel\ y\ si\ quiere\ que\ aparezca\ las\ puntuaciones\ y\ la\ vida\r\n
-comment2.params=flag
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ JUEGO.\r\n\ @param\ int\ lvl\ boolean\ muestraPuntuacion\r\n\ Constructor\ de\ juego\ recibe\ el\ nivel\ y\ si\ quiere\ que\ aparezca\ las\ puntuaciontuaciones\ y\ la\ vida\r\n
+comment2.params=muestraPuntuacion
 comment2.target=Juego(boolean)
-comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ JUEGO.\r\n\ @param\ \ boolean\ flag\r\n\ Constructor\ de\ juego\ recibe\ si\ quiere\ que\ aparezca\ las\ puntuaciones\ y\ la\ vida\r\n
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ JUEGO.\r\n\ @param\ \ boolean\ muestraPuntuacion\r\n\ Constructor\ de\ juego\ recibe\ si\ quiere\ que\ aparezca\ las\ puntuaciontuaciones\ y\ la\ vida\r\n
 comment3.params=
 comment3.target=void\ act()
-comment3.text=\r\n\ Verifica\ el\ nivel\ en\ el\ que\ estemos\ y\ el\ nivel\ que\ queremos\ cambiar\r\n\ y\ ademas\ termina\ el\ juego\ y\ modifica\ la\ puntuacion\r\n
-comment4.params=v
+comment3.text=\r\n\ Verifica\ el\ nivel\ en\ el\ que\ estemos\ y\ el\ nivel\ que\ queremos\ cambiar\r\n\ y\ ademas\ termina\ el\ juego\ y\ modifica\ la\ puntuaciontuacion\r\n
+comment4.params=vidaJ
 comment4.target=void\ setVida(int)
 comment4.text=\r\n\ @param\ int\ v\r\n\ Modifica\ la\ vida\ del\ jugador\r\n
-comment5.params=p
+comment5.params=puntuacion
 comment5.target=void\ setPuntos(int)
 comment5.text=\r\n\ param\ \ int\ p\ \r\n\ Modifica\ los\ puntos\ del\ jugador\r\n
 comment6.params=

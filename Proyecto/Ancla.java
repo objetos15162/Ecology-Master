@@ -7,12 +7,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Ancla extends Puntaje
+public class Ancla extends Player
 {
-    private int x , y;
-    GreenfootImage img; 
+    
+    
     private boolean flagPez;
-    private int puntos , vida;
+    private int Vida;
     private boolean flagBasura, flagContenedor;
     
     /**
@@ -20,31 +20,19 @@ public class Ancla extends Puntaje
      */
     public Ancla ()
     {
-        super();
-        img =  new GreenfootImage("ancla.png");
-        x = 250;
-        y = 50;
-        agregar();
+        super("ancla.png");
         flagBasura = flagPez = false;
-        puntos = 0;
-        vida = 10;
+        Vida = 10;
     }
     
     /**
      * obtiene la posicion de mi usuario y  esta checando si toca a un pez
      */
     public void act() 
-    {
+    {   
+        super.act();
+        agregaImg();
         posicionar();  
-        Juego world = (Juego)getWorld();
-        UserData[] us = world.getTrackedUsers();
-        for (UserData u : us) {
-            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-            setLocation(derecha.getX(),derecha.getY());
-            x= derecha.getX();
-            y= derecha.getY();
-        }
-        
         if(tocandoPez()) {
              eliminaPez();
         }
@@ -71,17 +59,9 @@ public class Ancla extends Puntaje
      */
     public void posicionar()
     {
-        setLocation(x,y);
+        setLocation(getXpos(),getYpos());
     }
     
-    /**
-     * agrega mi imagen
-     */
-     public void agregar()
-     {
-        setImage(img);
-    }
-
     /**
      * Metodo para eliminar a mi clase pez y modifica puntuacion
      */
@@ -98,7 +78,7 @@ public class Ancla extends Puntaje
     private boolean tocandoPez()
     {
         if(isTouching(Pez.class)) {
-            setVida(vida-=1);
+            setVida(Vida-=1);
             return true;
         }
         else {

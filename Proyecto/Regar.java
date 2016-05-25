@@ -7,19 +7,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Regar extends Actor
+public class Regar extends Player
 {
-    private int puntos,x,y;
-    GifImage gif ;
+    
+    GifImage RegarGif ;
     /**
      * constructor
      */
     public Regar()
     {
-        gif = new GifImage("regar.gif");
-        x=250;
-        y=358;
-        
+        super();
+        RegarGif = new GifImage("regar.gif");
+       
     }
     
     /**
@@ -27,18 +26,16 @@ public class Regar extends Actor
      * para cambiar la localizazcion de mi imagen
      */
     public void act() 
-    {
-        setImage(gif.getCurrentImage());
-        Juego world = (Juego)getWorld();
-        UserData[] us = world.getTrackedUsers();
-        for (UserData u : us) {
-           Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-           y= derecha.getY();
-           x= derecha.getX();
-        
-           if( y <= 357) {
-               setLocation(x,y);
+    {  
+        super.act();
+        setImage(RegarGif.getCurrentImage());
+        checking();
+           
+    }
+    
+    private void checking(){
+        if( getYpos() <= 357) {
+               setLocation(getXpos(),getYpos());
             }
-        }    
     }
 }

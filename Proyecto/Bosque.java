@@ -9,12 +9,12 @@ import java.util.*;
  */
 public class Bosque extends Juego
 {
-    private Cueva c; // objeto cueva
-    private int i ; //variable entera
+    private Cueva cueva; // objeto cueva
+    private int seleccionAnimal ; //variable entera
     private String [] animal; // arreglo de animales
-    boolean flagAnimalAp,flag2 ;
-    private SimpleTimer timer;
-    private int currentMillis,x,y;
+    boolean flagAnimalAp;
+    private SimpleTimer timerChange;
+    private int currentMillis; 
     /**
      * Constructor for objects of class bosque.
      * Constructor
@@ -27,18 +27,17 @@ public class Bosque extends Juego
         super.setVida(vida);
         super.setPuntos(puntos);
         flagAnimalAp = true;
-        flag2 = true;
-        timer = new SimpleTimer();
+        timerChange = new SimpleTimer();
         currentMillis = 0;
         animal = new String [4];
         animal[0] ="chango.gif";
         animal[1] ="tortuga.gif";
         animal[2] ="leon.gif";
         animal[3] ="guajolote.gif";
-        c = new Cueva("cueva.gif",getPuntos());
-        i = x = y =0;
-        addObject(c,25,455);
-        addObject(new Animal(getVida(),getPuntos(),animal[i]),600,455);
+        cueva = new Cueva("cueva.gif");
+        seleccionAnimal=0;
+        addObject(cueva,25,455);
+        addObject(new Animal(getVida(),getPuntos(),animal[seleccionAnimal]),600,455);
         prepare();
     }
     
@@ -48,18 +47,13 @@ public class Bosque extends Juego
     public void act()
     {    
         super.act();
-        UserData[] us = getTrackedUsers();
         
-        for (UserData u : us) {
-            Joint derecha = u.getJoint(Joint.RIGHT_HAND);
-            y= derecha.getY();
-            x= derecha.getX();
-        }
         
             
-            if(c.tocando() == false  && flagAnimalAp == true && i!= 0) {
+            if(cueva.tocando() == false  && flagAnimalAp == true &&
+               seleccionAnimal!= 0) {
              
-            switch(i){
+            switch(seleccionAnimal){
                 
                 case 1:
                 addObject(new Animal(getVida(),getPuntos(),"tortuga.gif"),550,400);
@@ -79,20 +73,20 @@ public class Bosque extends Juego
        
               }
               
-              if(c.tocando() == true && i == 0){
+              if(cueva.tocando() == true && seleccionAnimal == 0){
                 flagAnimalAp = false;
             }
             
-            if(c.tocando() == true && i >= 1){
+            if(cueva.tocando() == true && seleccionAnimal >= 1){
             flagAnimalAp = false;
             
         }
         
         
-            if(timer.millisElapsed() > 1000 &&flagAnimalAp == false ) {
-                timer.mark();
+            if(timerChange.millisElapsed() > 1000 &&flagAnimalAp == false ) {
+                timerChange.mark();
                 if(currentMillis == 5 ){
-                    i+=1;
+                    seleccionAnimal+=1;
                     flagAnimalAp = true;
                     currentMillis = 0;
                     int puntos = getPuntos();
@@ -101,20 +95,14 @@ public class Bosque extends Juego
                 else
                 currentMillis++;
             }
-            if(i == 3 && c.tocando() )
-            i = 4;
+            if(seleccionAnimal == 3 && cueva.tocando() )
+               seleccionAnimal = 4;
             
-            if( c.tocando() && i >= 4) {
-          setLvl(3);
-        }
+            if( cueva.tocando() && seleccionAnimal >= 4) {  
+                setLvl(3);
+               }
             
        
-           
-           /* if( i < 4 && flagAnimalAp == true) {
-                 addObject(new Animal(getVida(),getPuntos(),animal[i]),550,400);
-                 flagAnimalAp = false;
-                 
-            }*/
         
         
     }
@@ -136,11 +124,4 @@ public class Bosque extends Juego
         addObject(new Gif(enemigo[3]),360,400);
     }
     
-    public int getX(){
-        return x;
-    }
-    
-    public int getY(){
-        return y;
-    }
 }

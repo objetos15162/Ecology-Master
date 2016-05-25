@@ -7,18 +7,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class ButtonPlay extends Actor
+public class ButtonPlay extends Button
 {
     /**
      * Inicia el juego
      */
     public ButtonPlay()
     {
+        super();
     }
     
     public void act() 
     {
-        if(Greenfoot.mouseClicked(this)){
+        if(isClicked()){
             Greenfoot.setWorld(new Juego(1,true));
         }
     }    

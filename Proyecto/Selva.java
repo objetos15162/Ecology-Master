@@ -10,7 +10,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Selva extends Juego
 {
     private int vida; // variable para nuestro constructor
-    private Planta p0,p1,p2,p3,p4; // objetos a regar
+    private Planta Planta0;
+    private Planta Planta1;
+    private Planta Planta2;
+    private Planta Planta3;
+    private Planta Planta4; // objetos a regar
     /**
      * Constructor for objects of class selva.
      * 
@@ -25,18 +29,18 @@ public class Selva extends Juego
         super.setVida(vida);
         super.setPuntos(puntos);
         this.vida = vida;
-        p0 = new Planta();
-        p1 = new Planta();
-        p2 = new Planta ();
-        p3 = new Planta();
-        p4 = new Planta();
+        Planta0 = new Planta();
+        Planta1 = new Planta();
+        Planta2 = new Planta ();
+        Planta3 = new Planta();
+        Planta4 = new Planta();
         
         addObject(new Regar(),250,358);
-        addObject(p0,200,400);
-        addObject(p1,50,400);
-        addObject(p2,300,400);
-        addObject(p3,400,400);
-        addObject(p4,550,400);
+        addObject(Planta0,200,400);
+        addObject(Planta1,50,400);
+        addObject(Planta2,300,400);
+        addObject(Planta3,400,400);
+        addObject(Planta4,550,400);
     }
     
     /**
@@ -44,8 +48,9 @@ public class Selva extends Juego
      */
     public void act(){
         super.act();
-        int suma = p0.getContador() + p1.getContador() + p2.getContador() + p3.getContador() + p4.getContador();
-        if(suma >= 5) {
+        int sumaContador = Planta0.getContador() + Planta1.getContador() + Planta2.getContador() 
+        + Planta3.getContador() + Planta4.getContador();
+        if(sumaContador >= 5) {
             setLvl(4);
         }
     }

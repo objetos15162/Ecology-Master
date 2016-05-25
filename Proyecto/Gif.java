@@ -25,6 +25,8 @@ public class Gif extends Actor
     public void act() 
     {
         setImage(gif.getCurrentImage());
-    }    
+    } 
+    
+    
 }
 

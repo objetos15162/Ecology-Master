@@ -10,16 +10,16 @@ import java.util.*;
 //tabla   Contiene la la imagen de la tabla.
 // nombre Etiqueta que muestra el nombre.
 // puntos Etiqueta que muestra la puntuacion.
-// ban    Bandera que controla la incersion de los objetos en el mundo.
+// Ban    Bandera que controla la incersion de los objetos en el mundo.
 // c      Variable usada para ordenar las etiquetas en la tabla.
 public class TablaRecord extends Actor
 {
     private LinkedList<Usuario> usuario;
     private GreenfootImage tabla;
-    private Label nombre;
-    private Label puntos;
-    private boolean ban;
-    private int ordenador;
+    private Label nombreJugador;
+    private Label puntosJugador;
+    private boolean Ban;
+    private int Ordenador;
     
     /**Constructor de la clase aqui se inicializan todas las variables.
     @param us Lista de todos los usuarios.
@@ -28,8 +28,8 @@ public class TablaRecord extends Actor
     {
         usuario=new LinkedList<Usuario>();
         usuario=us;
-        ban=false;
-        ordenador=0;
+        Ban=false;
+        Ordenador=0;
         tabla=new GreenfootImage("TablaRecords.png");
     }
 
@@ -37,18 +37,18 @@ public class TablaRecord extends Actor
      */
     public void act() 
     {
-        if(ban==false) {
+        if(Ban==false) {
             setLocation(getWorld().getWidth()/2,getWorld().getHeight()/2);
             tabla.scale(350,300);
             setImage(tabla);
             for(Usuario i : usuario) {
-                nombre=new Label(i.getNombre()+".",30);
-                puntos=new Label(i.getPuntos()+".",30);
-                getWorld().addObject(nombre, 231,176+40*ordenador);
-                getWorld().addObject(puntos, 432,176+40*ordenador);
-                ordenador++;
+                nombreJugador=new Label(i.getnombreJugador()+".",30);
+                puntosJugador=new Label(i.getPuntuacionJugador()+".",30);
+                getWorld().addObject(nombreJugador, 231,176+40*Ordenador);
+                getWorld().addObject(puntosJugador, 432,176+40*Ordenador);
+                Ordenador++;
             }
-            ban=true;                
+            Ban=true;                
         }
     }    
 }

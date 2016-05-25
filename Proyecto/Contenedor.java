@@ -7,29 +7,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Contenedor extends Puntaje
+public class Contenedor extends Player
 {
-    GreenfootImage img;
-    private int x , y;
+    
     
     /**
      * Constructor
      */
     public Contenedor()
     {
-        img = new GreenfootImage("recicla.png");
-        x = 600;
-        y = 100;
+        super("recicla.png");
     }
     
     /**
      * escala imagen , elimina y posiciona
      */
     public void act() 
-    {
-        setImage(img);
-        setLocation(x,y);
-        escalar();
+    {   
+        agregaImg();
+        setLocation(600,100);
+        Escalar(40,40);
         elimina();
     }    
     
@@ -44,30 +41,4 @@ public class Contenedor extends Puntaje
         }
     }
     
-    /**
-     * @return int
-     * retorna posicion en X
-     */
-    public int getX()
-    {
-        return x;
-    }
-    
-    /**
-     * @return int
-     * retorna posicion en Y
-     * 
-     */
-    public int getY()
-    {
-        return y;
-    }
-    
-    /**
-     * escala la imagen
-     */
-    public void escalar()
-    {
-        img.scale(40,40 );
-    }
 }

@@ -6,25 +6,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-public class Cueva extends Puntaje
+public class Cueva extends Player
 {
     /**
      * Act - do whatever the cueva wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage img ;
-    private int puntos;
+
        /**
         * constructor
         * @param nombre
-        * @param puntos
+        * @param Puntuacion
         * 
-        * Recibe el nombre de la imagen y la cantidad de puntos del usuario
+        * Recibe el nombre de la imagen y la cantidad de Puntuacion del usuario
         */
-    public Cueva(String nombre, int puntos)
+    public Cueva(String nombre)
     {
-        img =  new GreenfootImage(nombre);
-        this.puntos = puntos;
+        
+        super(nombre);
+        
     }
     
     /**
@@ -33,7 +33,7 @@ public class Cueva extends Puntaje
      */
     public void act() 
     {   
-        setImage(img);
+        agregaImg();
         isTouchingAnimal();
     }  
     
