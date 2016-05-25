@@ -9,22 +9,35 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Player extends Actor
 {
     /**
-     * constructor
+     * Variable de instancia xPos y Ypos sirven para obtener de nuestro jugador
+     * la posicion en X y Y de su mano derecha 
      */
-    private int xPos , yPos;
-    private GreenfootImage Img; 
+    private int xPos , yPos; 
+    private GreenfootImage Img;  // Cargamos nuestra imagen que nos manden nuestras subclases
+    
+    /**
+     * Constructor
+     * @Param String nombreImg   recibe el nombre de la imagen 
+     * 
+     * Inicializa nuestras variables de instancia
+     */
     public Player(String nombreImg)
     {
         xPos = yPos  = 0;
         Img = new GreenfootImage(nombreImg);
     }
-    
+    /**
+     * Constructor , inicializa variables de instancia
+     */
     public Player()
     {
         xPos = yPos  = 0;
         
     }
-    
+    /**
+     * Obtiene la posicion de X y Y de nuestro usuario de su mano derecha y las asigna a nuestras variables
+     * Xpos y Ypos
+     */
     public void act() 
     {
         Juego world = (Juego)getWorld();
@@ -94,11 +107,17 @@ public class Player extends Actor
         puntaje +=3;
         mi_mundo.setPuntos(puntaje);
     }
-    
+    /**
+     * @return xPos
+     * Retorna la posicion X de la mano derecha de nuestro usuario
+     */
     public int getXpos(){
         return xPos;
     }
-    
+    /**
+     * @return xPos
+     * Retorna la posicion Y de la mano derecha de nuestro usuario
+     */
     public int getYpos(){
         return yPos;
     }
@@ -110,7 +129,9 @@ public class Player extends Actor
      {
         setImage(Img);
     }
-    
+    /**
+     * Escala la imagen
+     */
      public void Escalar(int Width , int Height){
          Img.scale(Width,Height);
         }

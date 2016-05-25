@@ -23,7 +23,7 @@ public  class Usuario extends Actor
         nombreJugador = "";
     }
     
-    /** siempre inicializa las variables para que no existan errores
+    /** siempre resetea las variables para que no existan errores
      * 
      */
     public void act() 

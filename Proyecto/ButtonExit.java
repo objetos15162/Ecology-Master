@@ -18,7 +18,7 @@ public class ButtonExit extends Button
     }
     
     /**
-     * cambia al menu 
+     * Si el boton esta presionado , cambiamos de mundo
      */
     public void act() 
     {

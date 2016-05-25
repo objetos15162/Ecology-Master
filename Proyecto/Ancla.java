@@ -12,8 +12,8 @@ public class Ancla extends Player
     
     
     
-    private int Vida;
-    private boolean flagBasura, flagContenedor;
+    private int Vida; // Init vida jugador
+    private boolean flagBasura, flagContenedor;// Banderas para saber si tocamos basura o contenedor
     
     /**
      * constructor
@@ -26,7 +26,7 @@ public class Ancla extends Player
     }
     
     /**
-     * obtiene la posicion de mi usuario y  esta checando si toca a un pez
+     * verifica si estamos tocando a un pez para eliminarlo o si estamos tocando al contenedor
      */
     public void act() 
     {   

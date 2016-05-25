@@ -22,8 +22,7 @@ public class Regar extends Player
     }
     
     /**
-     * Detecta los movimientos de mi usuario
-     * para cambiar la localizazcion de mi imagen
+     * Checa posicion de nuestra regadora y pone la imagen
      */
     public void act() 
     {  
@@ -32,7 +31,9 @@ public class Regar extends Player
         checking();
            
     }
-    
+    /**
+     * Checaa si nuestra regadora de plantas no excede la posicion
+     */
     private void checking(){
         if( getYpos() <= 357) {
                setLocation(getXpos(),getYpos());

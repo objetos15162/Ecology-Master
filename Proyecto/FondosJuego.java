@@ -3,15 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Fondos here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+  @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
  */
 public class FondosJuego extends Actor
 {
-    GreenfootImage Img ;
+    GreenfootImage Img ; // Cargar imagen de fondo
     /**
-     * Act - do whatever the Fondos wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * @Param String NomImg recibe el nombre del fondo 
      */
     
     public FondosJuego(String NomImg){
@@ -19,9 +18,15 @@ public class FondosJuego extends Actor
     }
     public void act() 
     {
-        setImage(Img); 
+        setImage(Img);  
     }   
     
+    /**
+     * @Param int Width   
+     * @Param int Height
+     * 
+     * Este metodo sirve unicamente para escalar nuestra imagen de fondo
+     */
     public void scaleImg (int Width , int Height){
         Img.scale(Width,Height);
     }

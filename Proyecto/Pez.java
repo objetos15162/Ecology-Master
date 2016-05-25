@@ -14,7 +14,7 @@ public class Pez extends Actor
     private String Nombre;// TOMA EL Nombre DE LA IMAGEN 
     private int Velocidad; // Velocidad DE MI PEX
     private boolean DireccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
-    private GreenfootImage ImgPez ;
+    private GreenfootImage ImgPez ;  // Variable para cargar la imagen y obtener metodos que nos serviran mas adelante
     
     /**
      * @param int x posicion x

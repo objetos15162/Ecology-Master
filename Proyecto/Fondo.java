@@ -14,6 +14,7 @@ public class Fondo extends FondosJuego
     /**
      * Constructor
      * @param String nombre  recibe el nombre del fondo
+     * Mandamos a nuestra super clase nombre de la imagen de fondo
      */
     public Fondo(String nombre)
     {
@@ -21,7 +22,7 @@ public class Fondo extends FondosJuego
     }
     
     /**
-     * Añade el objeto de imagen
+     * Escala nuestra imagen
      */
     public void act() 
     {

@@ -9,8 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ecology extends Actor
 {
     /**
-     * Act - do whatever the ecology wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Nuestra imagen fondo de pantalla principal
      */
     public Ecology()
     {

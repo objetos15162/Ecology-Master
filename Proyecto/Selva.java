@@ -10,11 +10,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Selva extends Juego
 {
     private int vida; // variable para nuestro constructor
+    // objetos a regar
     private Planta Planta0;
     private Planta Planta1;
     private Planta Planta2;
     private Planta Planta3;
-    private Planta Planta4; // objetos a regar
+    private Planta Planta4; 
     /**
      * Constructor for objects of class selva.
      * 

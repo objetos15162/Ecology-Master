@@ -17,6 +17,9 @@ public class ButtonPlay extends Button
         super();
     }
     
+    /**
+     * Si el boton esta presionado , cambiamos de mundo
+     */
     public void act() 
     {
         if(isClicked()){

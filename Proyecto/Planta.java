@@ -9,12 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (24-Mayo-2016)
  */
 public class Planta extends Player
+/**
+ *  @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
+ * @version (24-Mayo-2016)
+ */
 {
-    private GreenfootImage [] arbolSprite ;
-    private int timeSprite,timeSprite2,timeSprite3,timeSprite4,timeSprite5;
-    private SimpleTimer timerPlant,timerKill;
-    private boolean  banderaPuntos;
-    private int Contador;
+    private GreenfootImage [] arbolSprite ; // arreglo de imagenes para guardar los sprites de nuestro arbol
+    private int timeSprite,timeSprite2,timeSprite3,timeSprite4,timeSprite5; // tiempos necesarios para el cambio de sprites
+    private SimpleTimer timerPlant,timerKill; // tiempos para saber cuanto tiempo se esta regando la planta , y si no se riega el tiempo kill lleva el conteo de cuanto tiempo no se riega
+    private boolean  banderaPuntos; // Nos permite verificar si se le aumentan los puntos al jugador o se disminuyen
+    private int Contador; // Cuenta si el arbol termino en su ultima fase
     
     /**
      * Constructor
@@ -22,7 +26,15 @@ public class Planta extends Player
     public Planta( )
     {    
         super();
-        arbolSprite = new GreenfootImage [5];
+        Init();
+    }
+    
+    
+    /**
+     * Inicialiaza todas nuestras variables de instancia
+     */
+    private void Init(){
+      arbolSprite = new GreenfootImage [5];
         String nombres[] = {"arbol1.png","arbol1.1.png","arbol1.2.png","arbol1.3.png","arbol1.4.png"};
         
         for(int i = 0 ; i < 5 ; i++) {
@@ -34,7 +46,7 @@ public class Planta extends Player
         timeSprite4 = timeSprite5 = 0;
         timerPlant = timerKill = new SimpleTimer();
         setImage(arbolSprite[4]);
-        banderaPuntos = false;
+        banderaPuntos = false;  
     }
     
     /**
@@ -101,8 +113,11 @@ public class Planta extends Player
     {
         return Contador;
     }
-    
-    public void check(int time){
+    /**
+     * Checa el tiempo necesario para cambiar el sprite
+     * @param time tiempo necesario para cambiar nuuestro sprite
+     */
+    private void check(int time){
         switch(time){
             case 1:
                 if(getImage() == arbolSprite[4]) 
@@ -145,8 +160,10 @@ public class Planta extends Player
         
     }
     
-    
-    public void incrementa(char op){
+    /**
+     * @Param char op , a cual tiempo queremos incrementar
+     */
+    private void incrementa(char op){
         
         switch(op){
             case '1':
@@ -171,7 +188,10 @@ public class Planta extends Player
         
     }
     
-    public void recet(char op){
+    /**
+     * Cual tiempo vamos a recetear
+     */
+    private void recet(char op){
         switch(op){
             case '1':
             timeSprite=0;
@@ -192,8 +212,10 @@ public class Planta extends Player
             
         }
     }
-    
-    public boolean check (){
+    /**
+     * Checa si la planta va a morir
+     */
+    private boolean check (){
         
        if(timeSprite5 == 8)
        return true;

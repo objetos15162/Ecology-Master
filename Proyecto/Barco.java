@@ -14,14 +14,14 @@ public class Barco extends Player
      */
     
     /**
-     * Constructor
+     * Constructor manda el nombre de la imagen a nuestra super clase
      */
     public Barco()
     {   super("barco.png");
     }
     
     /**
-     * cambia la posicion de mi barco
+     * Cambia la posicion de nuestro barco 
      */
     public void act() 
     { 

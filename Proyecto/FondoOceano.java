@@ -9,8 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class FondoOceano extends FondosJuego
 {
     /**
-     * Act - do whatever the fondooceano wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Manda a nuestra super clase el nombre de nuestro fondo
      */
     public FondoOceano()
     {
@@ -18,7 +17,7 @@ public class FondoOceano extends FondosJuego
     }
     
     /**
-     * establece fondo de oceano
+     * escala  nuestra imagen
      */
     public void act() 
     {

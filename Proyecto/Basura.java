@@ -11,7 +11,7 @@ public class Basura extends Player
 {
     
    
-    private boolean tocandoAncla; // bandera
+    private boolean tocandoAncla; // bandera que nos indica si tocamos el ancla
     /**
      * Constructor
      * @param nombre  nombre de la imagen
@@ -26,7 +26,8 @@ public class Basura extends Player
     }
     
     /**
-     * posiciona la basura en random
+     * Verifica si nos toca el ancla para acceder a sus coordenadas 
+     * y podernos mover en la misma posicion de nuestra ancla
      */
     public void act() 
     {  
