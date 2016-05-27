@@ -11,10 +11,10 @@ public class Pez extends Actor
 {
     private int xPos; // PERMITE AL PEZ MOVERSE EN EL EJE X!!!!!!!!!!!!!!!!
     private int yPos; // PERMITE AL PEZ MOVERESE EN EL EJE Y!!!!!!!!!!!!
-    private String Nombre;// TOMA EL Nombre DE LA IMAGEN 
-    private int Velocidad; // Velocidad DE MI PEX
-    private boolean DireccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
-    private GreenfootImage ImgPez ;  // Variable para cargar la imagen y obtener metodos que nos serviran mas adelante
+    private String nombre;// TOMA EL Nombre DE LA IMAGEN 
+    private int velocidad; // Velocidad DE MI PEX
+    private boolean direccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
+    private GreenfootImage imgPez ;  // Variable para cargar la imagen y obtener metodos que nos serviran mas adelante
     
     /**
      * 
@@ -25,9 +25,9 @@ public class Pez extends Actor
     public Pez( String Nombre , int Velocidad , boolean DireccionIzqDer)
     {
         
-        this.Nombre = Nombre;
-        this.Velocidad = Velocidad;
-        this.DireccionIzqDer = DireccionIzqDer;
+        this.nombre = Nombre;
+        this.velocidad = Velocidad;
+        this.direccionIzqDer = DireccionIzqDer;
         cargarImagen(Nombre);
     }
     
@@ -47,19 +47,19 @@ public class Pez extends Actor
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(xPos <= mi_mundo.getWidth() - ImgPez.getWidth() && DireccionIzqDer) {
-            xPos+=Velocidad;
+        if(xPos <= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
+            xPos+=velocidad;
         }
         
-        if(xPos >= ImgPez.getWidth() && !DireccionIzqDer) {
-            xPos-=Velocidad;
+        if(xPos >= imgPez.getWidth() && !direccionIzqDer) {
+            xPos-=velocidad;
         }
         
-        if(xPos >= mi_mundo.getWidth() - ImgPez.getWidth() && DireccionIzqDer) {
+        if(xPos >= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
            reiniciarPez();
         }
            
-        if(xPos  <= ImgPez.getWidth()  && !DireccionIzqDer) {
+        if(xPos  <= imgPez.getWidth()  && !direccionIzqDer) {
             reiniciarPez();
         }
         setLocation(xPos,yPos);
@@ -73,17 +73,17 @@ public class Pez extends Actor
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(DireccionIzqDer) {
-            xPos = ImgPez.getWidth();
+        if(direccionIzqDer) {
+            xPos = imgPez.getWidth();
         }
         else {
-            xPos = mi_mundo.getWidth() - ImgPez.getWidth();
+            xPos = mi_mundo.getWidth() - imgPez.getWidth();
         }
      
-        ImgPez.setTransparency(0);
+        imgPez.setTransparency(0);
         yPos=(int)(Math.random()*250+200);
-        Velocidad = mi_mundo.generarAleatorio(7);
-        ImgPez.setTransparency(255);
+        velocidad = mi_mundo.generarAleatorio(7);
+        imgPez.setTransparency(255);
     }
     
     
@@ -94,8 +94,8 @@ public class Pez extends Actor
      */
     private void cargarImagen(String Nombre)
     {
-        ImgPez = new GreenfootImage(Nombre);
-        setImage(ImgPez);
-        ImgPez.scale(30,20);
+        imgPez = new GreenfootImage(Nombre);
+        setImage(imgPez);
+        imgPez.scale(30,20);
     }
 }
