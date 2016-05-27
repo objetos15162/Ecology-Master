@@ -9,8 +9,8 @@ import java.lang.Math.*;
  */
 public class Pez extends Actor
 {
-    private int posicionPezx; // PERMITE AL PEZ MOVERSE EN EL EJE X
-    private int posicionPezy; // PERMITE AL PEZ MOVERESE EN EL EJE Y
+    private int posicionPezx; // PERMITE AL PEZ MOVERSE 
+    private int posicionPezy; // PERMITE AL PEZ MOVERESE 
     private String nombre;// TOMA EL Nombre DE LA IMAGEN 
     private int velocidad; // Velocidad DE MI PEX
     private boolean direccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
