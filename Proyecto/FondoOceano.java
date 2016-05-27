@@ -22,6 +22,6 @@ public class FondoOceano extends FondosJuego
     public void act() 
     {
         super.act();
-        scaleImg(1100,590);
+        scaleimg(1100,590);
     }    
 }

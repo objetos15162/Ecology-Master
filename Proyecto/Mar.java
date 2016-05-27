@@ -10,9 +10,9 @@ import java.util.ArrayList;
  */
 public class Mar extends Juego
 {
-    private Ancla Ancla ; // objeto ancla
-    private Barco Barco ;// objeto barco
-    private Contenedor Contenedor; // variable contenedor
+    private Ancla ancla ; // objeto ancla
+    private Barco barco ;// objeto barco
+    private Contenedor contenedor; // variable contenedor
     
     /**
      * Constructor for objects of class selva.
@@ -45,7 +45,7 @@ public class Mar extends Juego
     */   
     public int getAnclaLocationX()
     {
-        return Ancla.getX();
+        return ancla.getX();
     }
     
     /**
@@ -55,7 +55,7 @@ public class Mar extends Juego
     */ 
     public int getAnclaLocationY()
     {
-        return Ancla.getY();
+        return ancla.getY();
     }  
     
    
@@ -76,16 +76,16 @@ public class Mar extends Juego
     /**
      * Metodo que agrega a todos los objetos en mi mundo
      */
-     public void prepare()
+     private void prepare()
      {
         String nombres[] = {"Pez.png","pez2.png","pez6.png","pez3.png","pez4.png","tiburon.png",
                     "pezz5.png","lata1.png","petroleo.png"};
-        Barco = new Barco();
-        Ancla = new Ancla();
-        Contenedor = new Contenedor();
+        barco = new Barco();
+        ancla = new Ancla();
+        contenedor = new Contenedor();
         posicionarObj(new Fondo("olas.png"),0,120);
         posicionarObj(new FondoOceano(),100,320);
-        posicionarObj(Barco,getWidth()/2,100);
+        posicionarObj(barco,getWidth()/2,100);
         for(int i = 0 ; i < 3 ;i++) {
             posicionarObj(new Pez(generarAleatorio(400),200,nombres[i],generarAleatorio(3),true),
             generarAleatorio(400),400);
@@ -106,10 +106,10 @@ public class Mar extends Juego
                 (int)(Math.random()*250+200)),(int)(Math.random()*500+100),(int)(Math.random()*250+200)); 
             }
         }
-        posicionarObj(Ancla,getWidth()/2,300);
+        posicionarObj(ancla,getWidth()/2,300);
         posicionarObj(new Gif("tesoro.gif"),30,390);
         posicionarObj(new Gif("tesoro.gif"),200,450);
-        posicionarObj(Contenedor,600,100);
+        posicionarObj(contenedor,600,100);
     }
     
      /**

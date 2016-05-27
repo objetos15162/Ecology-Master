@@ -35,7 +35,7 @@ public class Basura extends Player
         World m = getWorld();
         Mar mundo = (Mar)m;
         agregaImg();
-        if( touchme()) {
+        if( getTouchme()) {
             setPosition(mundo.getAnclaLocationX(),mundo.getAnclaLocationY());
         }
     }
@@ -45,7 +45,7 @@ public class Basura extends Player
      * @return tocando  
      * retorna bandera si esta tocando el ancla
      */
-    public boolean touchme()
+    private boolean getTouchme()
     {
         if(isTouching(Ancla.class) ) {
             tocandoAncla = true;
@@ -59,7 +59,7 @@ public class Basura extends Player
      * @param int x  modifica posicion x
      * @param int y modifica posicion y
      */
-    public void setPosition(int x , int y )
+    private void setPosition(int x , int y )
     {
         setLocation(x,y);
     }

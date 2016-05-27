@@ -8,17 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FondosJuego extends Actor
 {
-    GreenfootImage Img ; // Cargar imagen de fondo
+    GreenfootImage img ; // Cargar imagen de fondo
     /**
-     * @Param String NomImg recibe el nombre del fondo 
+     * @Param String Nomimg recibe el nombre del fondo 
      */
     
-    public FondosJuego(String NomImg){
-        Img = new GreenfootImage(NomImg);
+    public FondosJuego(String Nomimg){
+        img = new GreenfootImage(Nomimg);
     }
     public void act() 
     {
-        setImage(Img);  
+        setImage(img);  
     }   
     
     /**
@@ -27,8 +27,8 @@ public class FondosJuego extends Actor
      * 
      * Este metodo sirve unicamente para escalar nuestra imagen de fondo
      */
-    public void scaleImg (int Width , int Height){
-        Img.scale(Width,Height);
+    public void scaleimg (int Width , int Height){
+        img.scale(Width,Height);
     }
 }
 

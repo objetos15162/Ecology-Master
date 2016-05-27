@@ -13,7 +13,7 @@ public class Player extends Actor
      * la posicion en X y Y de su mano derecha 
      */
     private int xPos , yPos; 
-    private GreenfootImage Img;  // Cargamos nuestra imagen que nos manden nuestras subclases
+    private GreenfootImage img;  // Cargamos nuestra imagen que nos manden nuestras subclases
     
     /**
      * Constructor
@@ -24,7 +24,7 @@ public class Player extends Actor
     public Player(String nombreImg)
     {
         xPos = yPos  = 0;
-        Img = new GreenfootImage(nombreImg);
+        img = new GreenfootImage(nombreImg);
     }
     /**
      * Constructor , inicializa variables de instancia
@@ -127,12 +127,12 @@ public class Player extends Actor
      */
      public void agregaImg()
      {
-        setImage(Img);
+        setImage(img);
     }
     /**
      * Escala la imagen
      */
      public void Escalar(int Width , int Height){
-         Img.scale(Width,Height);
+         img.scale(Width,Height);
         }
 }

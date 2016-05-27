@@ -12,7 +12,7 @@ public class Ancla extends Player
     
     
     
-    private int Vida; // Init vida jugador
+    private int vida; // Init vida jugador
     private boolean flagBasura, flagContenedor;// Banderas para saber si tocamos basura o contenedor
     
     /**
@@ -22,7 +22,7 @@ public class Ancla extends Player
     {
         super("ancla.png");
         flagBasura =  false;
-        Vida = 10;
+        vida = 10;
     }
     
     /**
@@ -57,7 +57,7 @@ public class Ancla extends Player
     /**
      * Posiciona objeto
      */
-    public void posicionar()
+    private void posicionar()
     {
         setLocation(getXpos(),getYpos());
     }
@@ -78,7 +78,7 @@ public class Ancla extends Player
     private boolean tocandoPez()
     {
         if(isTouching(Pez.class)) {
-            setVida(Vida-=1);
+            setVida(vida-=1);
             return true;
         }
         else {
@@ -91,7 +91,7 @@ public class Ancla extends Player
      * retorna si estamos tocando el contenedor
      */
     
-    public boolean isTouchingContenedor()
+    private boolean isTouchingContenedor()
     {
         if(isTouching(Contenedor.class)) {
             flagContenedor = true;

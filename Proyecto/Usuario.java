@@ -6,12 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Alejo Hilario Angel Omar,    Miranda Victorino Aaron) 
  * @version (24-Mayo-2016)
  */
-// PuntuacionJugador cariable que guarda los PuntuacionJugador
+// puntuacionJugador cariable que guarda los puntuacionJugador
 // nombreJugador variable que guarda el nombreJugador del jugador
 
 public  class Usuario extends Actor
 {
-    private int PuntuacionJugador; // variable entera para guardar PuntuacionJugador
+    private int puntuacionJugador; // variable entera para guardar puntuacionJugador
     private String nombreJugador; // variable String recibe el nombreJugador del jugador
 
     /**
@@ -19,7 +19,7 @@ public  class Usuario extends Actor
      */
     public Usuario()
     {
-        PuntuacionJugador = 0;
+        puntuacionJugador = 0;
         nombreJugador = "";
     }
     
@@ -29,7 +29,7 @@ public  class Usuario extends Actor
     public void act() 
     {
        nombreJugador="";
-       PuntuacionJugador=0;
+       puntuacionJugador=0;
     }    
     
     /**
@@ -45,9 +45,9 @@ public  class Usuario extends Actor
      * @Param int p  
      * Cambia la puntuacion del jugador
      */
-    public void setPuntuacionJugador(int puntuacion)
+    public void setpuntuacionJugador(int puntuacion)
     {
-        PuntuacionJugador=puntuacion;
+        puntuacionJugador=puntuacion;
     }
     
     /**
@@ -60,11 +60,11 @@ public  class Usuario extends Actor
     }
     
     /**
-     * @return PuntuacionJugador
-     * Regresa los PuntuacionJugador del jugador
+     * @return puntuacionJugador
+     * Regresa los puntuacionJugador del jugador
      */
-    public int getPuntuacionJugador()
+    public int getpuntuacionJugador()
     {
-        return PuntuacionJugador;
+        return puntuacionJugador;
     }    
 }

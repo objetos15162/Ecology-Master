@@ -33,7 +33,7 @@ public class Contenedor extends Player
     /**
      * metodo que elimina basura y aumenta puntos
      */
-    public void  elimina()
+    private void  elimina()
     {
         if(isTouching(Basura.class)) {
             removeTouching(Basura.class);

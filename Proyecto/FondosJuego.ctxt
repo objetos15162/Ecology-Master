@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=FondosJuego
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Fondos\ here.\r\n\ \r\n\ \ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
-comment1.params=NomImg
+comment1.params=Nomimg
 comment1.target=FondosJuego(java.lang.String)
-comment1.text=\r\n\ @Param\ String\ NomImg\ recibe\ el\ nombre\ del\ fondo\ \r\n
+comment1.text=\r\n\ @Param\ String\ Nomimg\ recibe\ el\ nombre\ del\ fondo\ \r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=Width\ Height
-comment3.target=void\ scaleImg(int,\ int)
+comment3.target=void\ scaleimg(int,\ int)
 comment3.text=\r\n\ @Param\ int\ Width\ \ \ \r\n\ @Param\ int\ Height\r\n\ \r\n\ Este\ metodo\ sirve\ unicamente\ para\ escalar\ nuestra\ imagen\ de\ fondo\r\n
 numComments=4

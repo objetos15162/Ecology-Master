@@ -27,6 +27,6 @@ public class Fondo extends FondosJuego
     public void act() 
     {
         super.act();
-        scaleImg(4000,100);
+        scaleimg(4000,100);
     }    
 }

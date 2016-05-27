@@ -10,14 +10,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Regar extends Player
 {
     
-    GifImage RegarGif ;
+    GifImage regarGif ;
     /**
      * constructor
      */
     public Regar()
     {
         super();
-        RegarGif = new GifImage("regar.gif");
+        regarGif = new GifImage("regar.gif");
        
     }
     
@@ -27,7 +27,7 @@ public class Regar extends Player
     public void act() 
     {  
         super.act();
-        setImage(RegarGif.getCurrentImage());
+        setImage(regarGif.getCurrentImage());
         checking();
            
     }

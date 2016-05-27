@@ -44,7 +44,7 @@ public class Pez extends Actor
     /**
      * Metodo para mover a mi pez dentro del mundo
      */
-    public void mover()
+    private void mover()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
@@ -70,7 +70,7 @@ public class Pez extends Actor
     /**
     * metodo para desaparecer pez y cambiar DireccionIzqDer
     */
-    public void reiniciarPez()
+    private void reiniciarPez()
     {
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
@@ -93,7 +93,7 @@ public class Pez extends Actor
      * metodo para cargar imagen del pez
      * 
      */
-    public void cargarImagen(String Nombre)
+    private void cargarImagen(String Nombre)
     {
         ImgPez = new GreenfootImage(Nombre);
         setImage(ImgPez);

@@ -15,9 +15,9 @@ public class Juego extends KinectWorld
     private Counter vida; // contador de vida
     private int puntos, vidaJugador,lvl; // variables privadas  para puntuaciontuacion vida y nivel
     private String nombre; // agrega el nombre del jugador
-    private Usuario Usuario; // guarda todos los datos del jugador
+    private Usuario usuario; // guarda todos los datos del jugador
     private Record record; // objeto para actualizar los records
-    private Instruction i; // objeto que nos permite detectar Usuario kinect
+    private Instruction i; // objeto que nos permite detectar usuario kinect
     
     /**
      * Constructor for objects of class JUEGO.
@@ -93,14 +93,14 @@ public class Juego extends KinectWorld
         }
             
         if(vidaJugador <= 0  || lvl == 4 ) {
-            Usuario = new Usuario();
-            Usuario.setnombreJugador(Greenfoot.ask("dame tu nombre"));
-            Usuario.setPuntuacionJugador(getPuntos());
+            usuario = new Usuario();
+            usuario.setnombreJugador(Greenfoot.ask("dame tu nombre"));
+            usuario.setpuntuacionJugador(getPuntos());
             record = new Record();
-            int pts = Usuario.getPuntuacionJugador();
+            int pts = usuario.getpuntuacionJugador();
             System.out.println(pts);
-            Usuario.setPuntuacionJugador(pts);
-            record.addUsuario(Usuario);
+            usuario.setpuntuacionJugador(pts);
+            record.addUsuario(usuario);
             Greenfoot.setWorld(new Menu());
                
         }

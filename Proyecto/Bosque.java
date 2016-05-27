@@ -110,7 +110,7 @@ public class Bosque extends Juego
     /**
      * prepara el mundo del nivel
      */
-    public void prepare(){
+    private void prepare(){
         String enemigo[] = {"cazador1.gif","cazador2.gif","planta1.gif","planta2.gif"};
         addObject(new Gif(enemigo[0]),25,400);
         addObject(new Gif(enemigo[0]),200,280);

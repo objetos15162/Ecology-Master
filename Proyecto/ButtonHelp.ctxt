@@ -6,4 +6,5 @@ comment1.target=ButtonHelp()
 comment1.text=\r\n\ RNos\ lleva\ al\ menu\ de\ ayuda\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Si\ el\ boton\ esta\ presionado\ ,\ cambiamos\ de\ mundo\r\n
 numComments=3

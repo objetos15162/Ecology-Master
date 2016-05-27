@@ -18,8 +18,8 @@ public class TablaRecord extends Actor
     private GreenfootImage tabla;
     private Label nombreJugador;
     private Label puntosJugador;
-    private boolean Ban;
-    private int Ordenador;
+    private boolean ban;
+    private int ordenador;
     
     /**Constructor de la clase aqui se inicializan todas las variables.
     @param us Lista de todos los usuarios.
@@ -28,8 +28,8 @@ public class TablaRecord extends Actor
     {
         usuario=new LinkedList<Usuario>();
         usuario=us;
-        Ban=false;
-        Ordenador=0;
+        ban=false;
+        ordenador=0;
         tabla=new GreenfootImage("TablaRecords.png");
     }
 
@@ -37,18 +37,18 @@ public class TablaRecord extends Actor
      */
     public void act() 
     {
-        if(Ban==false) {
+        if(ban==false) {
             setLocation(getWorld().getWidth()/2,getWorld().getHeight()/2);
             tabla.scale(350,300);
             setImage(tabla);
             for(Usuario i : usuario) {
                 nombreJugador=new Label(i.getnombreJugador()+".",30);
-                puntosJugador=new Label(i.getPuntuacionJugador()+".",30);
-                getWorld().addObject(nombreJugador, 231,176+40*Ordenador);
-                getWorld().addObject(puntosJugador, 432,176+40*Ordenador);
-                Ordenador++;
+                puntosJugador=new Label(i.getpuntuacionJugador()+".",30);
+                getWorld().addObject(nombreJugador, 231,176+40*ordenador);
+                getWorld().addObject(puntosJugador, 432,176+40*ordenador);
+                ordenador++;
             }
-            Ban=true;                
+            ban=true;                
         }
     }    
 }

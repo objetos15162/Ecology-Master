@@ -56,7 +56,7 @@ public class Record extends Actor
             s = new PrintWriter(bw);
             for(Usuario i : records) {
                 s.println(i.getnombreJugador());
-                s.println(i.getPuntuacionJugador()+"");
+                s.println(i.getpuntuacionJugador()+"");
             }
             s.close();
             bw.close();
@@ -85,7 +85,7 @@ public class Record extends Actor
                 if((linea = bl.readLine()) != null) {
                     texto=linea;
                     puntos = Integer.parseInt(texto);
-                    usuario.setPuntuacionJugador(puntos);
+                    usuario.setpuntuacionJugador(puntos);
                 }
                 records.add(usuario);
             }   
@@ -131,7 +131,7 @@ public class Record extends Actor
         int n=records.size();
         for(int c=0;c<n-1;c++) {
             for(int c2=0;c2<n-1;c2++) {
-                if((records.get(c2).getPuntuacionJugador())>(records.get(c2+1).getPuntuacionJugador())) {
+                if((records.get(c2).getpuntuacionJugador())>(records.get(c2+1).getpuntuacionJugador())) {
                     aux=records.get(c2);
                     records.add(c2,records.get(c2+1));
                     records.remove(c2+2);                    

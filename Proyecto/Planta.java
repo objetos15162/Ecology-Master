@@ -18,7 +18,7 @@ public class Planta extends Player
     private int timeSprite,timeSprite2,timeSprite3,timeSprite4,timeSprite5; // tiempos necesarios para el cambio de sprites
     private SimpleTimer timerPlant,timerKill; // tiempos para saber cuanto tiempo se esta regando la planta , y si no se riega el tiempo kill lleva el conteo de cuanto tiempo no se riega
     private boolean  banderaPuntos; // Nos permite verificar si se le aumentan los puntos al jugador o se disminuyen
-    private int Contador; // Cuenta si el arbol termino en su ultima fase
+    private int contador; // Cuenta si el arbol termino en su ultima fase
     
     /**
      * Constructor
@@ -41,7 +41,7 @@ public class Planta extends Player
            arbolSprite[i] = new GreenfootImage(nombres[i]);
         }
         
-        Contador = 0;
+        contador = 0;
         timeSprite = timeSprite2 = timeSprite3 = 
         timeSprite4 = timeSprite5 = 0;
         timerPlant = timerKill = new SimpleTimer();
@@ -111,7 +111,7 @@ public class Planta extends Player
      */
     public int getContador()
     {
-        return Contador;
+        return contador;
     }
     /**
      * Checa el tiempo necesario para cambiar el sprite
@@ -137,7 +137,7 @@ public class Planta extends Player
                 if(getImage() == arbolSprite[1]) {
                         setImage(arbolSprite[0]);
                         banderaPuntos = true;
-                        Contador++;
+                        contador++;
                     }
             
                 if(banderaPuntos) {

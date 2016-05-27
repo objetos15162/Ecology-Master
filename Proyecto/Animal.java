@@ -22,14 +22,14 @@ public class Animal extends Player
      * recibe vida y puntos del jugador para modificarlos 
      * y recibe el nombre de la imagen
      */
-    private int Vida,Puntos;
+    private int vida,puntos;
     private GifImage gifAnimal ;
     private String nombre;
     
     public Animal (int vida ,int puntos,String nombre){
         super();
-        Vida = vida;
-        Puntos = puntos;
+        vida = vida;
+        puntos = puntos;
         gifAnimal = new GifImage(nombre); 
     }
     
@@ -53,8 +53,8 @@ public class Animal extends Player
     private void isTouchingEnemy()
     {
         if(isTouching(Gif.class)) {
-            setPuntos(Puntos--);
-            setVida(Vida-=1);
+            setPuntos(puntos--);
+            setVida(vida-=1);
             removeTouching(Gif.class);
         }
     }
