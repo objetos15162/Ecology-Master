@@ -9,8 +9,8 @@ import java.lang.Math.*;
  */
 public class Pez extends Actor
 {
-    private int xPos; // PERMITE AL PEZ MOVERSE EN EL EJE X!!!!!!!!!!!!!!!!
-    private int yPos; // PERMITE AL PEZ MOVERESE EN EL EJE Y!!!!!!!!!!!!
+    private int posicionPezx; // PERMITE AL PEZ MOVERSE EN EL EJE X
+    private int posicionPezy; // PERMITE AL PEZ MOVERESE EN EL EJE Y
     private String nombre;// TOMA EL Nombre DE LA IMAGEN 
     private int velocidad; // Velocidad DE MI PEX
     private boolean direccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
@@ -47,22 +47,22 @@ public class Pez extends Actor
         World mundo = getWorld();
         Mar mi_mundo =(Mar)mundo;
         
-        if(xPos <= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
-            xPos+=velocidad;
+        if(posicionPezx <= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
+            posicionPezx+=velocidad;
         }
         
-        if(xPos >= imgPez.getWidth() && !direccionIzqDer) {
-            xPos-=velocidad;
+        if(posicionPezx >= imgPez.getWidth() && !direccionIzqDer) {
+            posicionPezx-=velocidad;
         }
         
-        if(xPos >= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
+        if(posicionPezx >= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
            reiniciarPez();
         }
            
-        if(xPos  <= imgPez.getWidth()  && !direccionIzqDer) {
+        if(posicionPezx  <= imgPez.getWidth()  && !direccionIzqDer) {
             reiniciarPez();
         }
-        setLocation(xPos,yPos);
+        setLocation(posicionPezx,posicionPezy);
     }
     
     /**
@@ -74,14 +74,14 @@ public class Pez extends Actor
         Mar mi_mundo =(Mar)mundo;
         
         if(direccionIzqDer) {
-            xPos = imgPez.getWidth();
+            posicionPezx = imgPez.getWidth();
         }
         else {
-            xPos = mi_mundo.getWidth() - imgPez.getWidth();
+            posicionPezx = mi_mundo.getWidth() - imgPez.getWidth();
         }
      
         imgPez.setTransparency(0);
-        yPos=(int)(Math.random()*250+200);
+        posicionPezy=(int)(Math.random()*250+200);
         velocidad = mi_mundo.generarAleatorio(7);
         imgPez.setTransparency(255);
     }

@@ -12,7 +12,7 @@ public class Player extends Actor
      * Variable de instancia xPos y Ypos sirven para obtener de nuestro jugador
      * la posicion en X y Y de su mano derecha 
      */
-    private int xPos , yPos; 
+    private int ejeX , ejeY;  // variables que almacenan la posicion en X y Y de los movimientos de nuestra mano X y Y
     private GreenfootImage img;  // Cargamos nuestra imagen que nos manden nuestras subclases
     
     /**
@@ -23,7 +23,7 @@ public class Player extends Actor
      */
     public Player(String nombreImg)
     {
-        xPos = yPos  = 0;
+        ejeX = ejeY  = 0;
         img = new GreenfootImage(nombreImg);
     }
     /**
@@ -31,7 +31,7 @@ public class Player extends Actor
      */
     public Player()
     {
-        xPos = yPos  = 0;
+        ejeX= ejeY  = 0;
         
     }
     /**
@@ -45,8 +45,8 @@ public class Player extends Actor
         for (UserData u : us) {
             Joint derecha = u.getJoint(Joint.RIGHT_HAND);
             setLocation(derecha.getX(),derecha.getY());
-            xPos= derecha.getX();
-            yPos= derecha.getY();
+            ejeX= derecha.getX();
+            ejeY= derecha.getY();
         }
         
     }  
@@ -112,14 +112,14 @@ public class Player extends Actor
      * Retorna la posicion X de la mano derecha de nuestro usuario
      */
     public int getXpos(){
-        return xPos;
+        return ejeX;
     }
     /**
      * @return xPos
      * Retorna la posicion Y de la mano derecha de nuestro usuario
      */
     public int getYpos(){
-        return yPos;
+        return ejeY;
     }
     
     /**
