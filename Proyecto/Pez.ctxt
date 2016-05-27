@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Pez
 comment0.text=\r\n\ Esta\ clase\ nos\ muestra\ los\ peces.\r\n\ Le\ da\ el\ movimiento\ a\ los\ peces.\r\n\ \r\n\ @author\ (Alejo\ Hilario\ Angel\ Omar,\ \ \ \ Miranda\ Victorino\ Aaron)\ \r\n\ @version\ (24-Mayo-2016)\r\n
-comment1.params=x\ y\ Nombre\ Velocidad\ DireccionIzqDer
-comment1.target=Pez(int,\ int,\ java.lang.String,\ int,\ boolean)
-comment1.text=\r\n\ @param\ int\ x\ posicion\ x\r\n\ @param\ int\ y\ posicion\ y\r\n\ @param\ String\ Nombre\ Nombre\ de\ la\ imagen\r\n\ @param\ int\ Velocidad\ Velocidad\ del\ pez\r\n\ @param\ boolean\ DireccionIzqDer\ bander\ que\ nos\ indica\ la\ DireccionIzqDer\ del\ pez\r\n
+comment1.params=Nombre\ Velocidad\ DireccionIzqDer
+comment1.target=Pez(java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ \r\n\ @param\ String\ Nombre\ Nombre\ de\ la\ imagen\r\n\ @param\ int\ Velocidad\ Velocidad\ del\ pez\r\n\ @param\ boolean\ DireccionIzqDer\ bander\ que\ nos\ indica\ la\ DireccionIzqDer\ del\ pez\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ mueve\ a\ los\ peces\r\n

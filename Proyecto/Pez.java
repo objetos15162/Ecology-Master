@@ -17,16 +17,14 @@ public class Pez extends Actor
     private GreenfootImage ImgPez ;  // Variable para cargar la imagen y obtener metodos que nos serviran mas adelante
     
     /**
-     * @param int x posicion x
-     * @param int y posicion y
+     * 
      * @param String Nombre Nombre de la imagen
      * @param int Velocidad Velocidad del pez
      * @param boolean DireccionIzqDer bander que nos indica la DireccionIzqDer del pez
      */
-    public Pez(int x , int y , String Nombre , int Velocidad , boolean DireccionIzqDer)
+    public Pez( String Nombre , int Velocidad , boolean DireccionIzqDer)
     {
-        xPos = x;
-        yPos = y;
+        
         this.Nombre = Nombre;
         this.Velocidad = Velocidad;
         this.DireccionIzqDer = DireccionIzqDer;
@@ -87,6 +85,7 @@ public class Pez extends Actor
         Velocidad = mi_mundo.generarAleatorio(7);
         ImgPez.setTransparency(255);
     }
+    
     
     /**
      * @param Strin Nombre  recibe el Nombre de la imagen

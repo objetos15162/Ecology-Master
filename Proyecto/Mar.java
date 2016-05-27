@@ -87,12 +87,12 @@ public class Mar extends Juego
         posicionarObj(new FondoOceano(),100,320);
         posicionarObj(barco,getWidth()/2,100);
         for(int i = 0 ; i < 3 ;i++) {
-            posicionarObj(new Pez(generarAleatorio(400),200,nombres[i],generarAleatorio(3),true),
+            posicionarObj(new Pez(nombres[i],generarAleatorio(3),true),
             generarAleatorio(400),400);
         }
         
         for(int i = 3 ; i < 7 ;i ++) {
-            posicionarObj(new Pez(generarAleatorio(400),300,nombres[i],generarAleatorio(3),false),
+            posicionarObj(new Pez(nombres[i],generarAleatorio(3),false),
             generarAleatorio(400),400);
         }
         
