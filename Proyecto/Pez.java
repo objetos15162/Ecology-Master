@@ -9,8 +9,7 @@ import java.lang.Math.*;
  */
 public class Pez extends Actor
 {
-    private int posicionPezx; // PERMITE AL PEZ MOVERSE 
-    private int posicionPezy; // PERMITE AL PEZ MOVERESE 
+   
     private String nombre;// TOMA EL Nombre DE LA IMAGEN 
     private int velocidad; // Velocidad DE MI PEX
     private boolean direccionIzqDer; //DireccionIzqDer DE MI PEZ IZQUIERDA O DERECHA
@@ -44,10 +43,13 @@ public class Pez extends Actor
      */
     private void mover()
     {
+        int posicionPezx = getX(); 
+        int posicionPezy = getY();  
+          
         World mundo = getWorld();
-        Mar mi_mundo =(Mar)mundo;
+        Mar miMundo =(Mar)mundo;
         
-        if(posicionPezx <= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
+        if(posicionPezx <= miMundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
             posicionPezx+=velocidad;
         }
         
@@ -55,34 +57,38 @@ public class Pez extends Actor
             posicionPezx-=velocidad;
         }
         
-        if(posicionPezx >= mi_mundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
-           reiniciarPez();
-        }
+        if(posicionPezx >= miMundo.getWidth() - imgPez.getWidth() && direccionIzqDer) {
            
-        if(posicionPezx  <= imgPez.getWidth()  && !direccionIzqDer) {
             reiniciarPez();
+            if(direccionIzqDer) {
+            posicionPezx = imgPez.getWidth();
+            posicionPezy=(int)(Math.random()*250+200);
+       }
+           
+       }
+           
+       if(posicionPezx  <= imgPez.getWidth()  && !direccionIzqDer) {
+            
+            reiniciarPez();
+            posicionPezx = miMundo.getWidth() - imgPez.getWidth();
+            posicionPezy=(int)(Math.random()*250+200);
         }
+        
+        
         setLocation(posicionPezx,posicionPezy);
     }
     
     /**
     * metodo para desaparecer pez y cambiar DireccionIzqDer
     */
-    private void reiniciarPez()
+    private void reiniciarPez( )
     {
-        World mundo = getWorld();
-        Mar mi_mundo =(Mar)mundo;
         
-        if(direccionIzqDer) {
-            posicionPezx = imgPez.getWidth();
-        }
-        else {
-            posicionPezx = mi_mundo.getWidth() - imgPez.getWidth();
-        }
-     
+        World mundo = getWorld();
+        Mar miMundo =(Mar)mundo;
         imgPez.setTransparency(0);
-        posicionPezy=(int)(Math.random()*250+200);
-        velocidad = mi_mundo.generarAleatorio(7);
+        
+        velocidad = miMundo.generarAleatorio(7);
         imgPez.setTransparency(255);
     }
     
@@ -98,4 +104,6 @@ public class Pez extends Actor
         setImage(imgPez);
         imgPez.scale(30,20);
     }
+    
+    
 }

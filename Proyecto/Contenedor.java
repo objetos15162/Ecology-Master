@@ -26,7 +26,7 @@ public class Contenedor extends Player
     {   
         agregaImg();
         setLocation(600,100);
-        Escalar(40,40);
+        escalar(40,40);
         elimina();
     }    
     

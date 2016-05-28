@@ -26,9 +26,9 @@ public class Barco extends Player
     public void act() 
     { 
         super.act();
-       agregaImg();
-      setLocation(getXpos(),50);
-      Escalar(70,70);
+        agregaImg();
+        setLocation(getXpos(),50);
+        escalar(70,70);
     }
     
     

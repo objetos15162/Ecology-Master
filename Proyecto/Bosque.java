@@ -71,16 +71,16 @@ public class Bosque extends Juego
             }
             
        
-              }
-              
-              if(cueva.tocando() == true && seleccionAnimal == 0){
-                flagAnimalAp = false;
             }
+              
+            if(cueva.tocando() == true && seleccionAnimal == 0){
+                flagAnimalAp = false;
+               }
             
             if(cueva.tocando() == true && seleccionAnimal >= 1){
             flagAnimalAp = false;
             
-        }
+            }
         
         
             if(timerChange.millisElapsed() > 1000 &&flagAnimalAp == false ) {

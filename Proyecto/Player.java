@@ -132,7 +132,7 @@ public class Player extends Actor
     /**
      * Escala la imagen
      */
-     public void Escalar(int Width , int Height){
+     public void escalar(int Width , int Height){
          img.scale(Width,Height);
         }
 }

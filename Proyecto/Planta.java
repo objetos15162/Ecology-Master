@@ -26,14 +26,14 @@ public class Planta extends Player
     public Planta( )
     {    
         super();
-        Init();
+        init();
     }
     
     
     /**
      * Inicialiaza todas nuestras variables de instancia
      */
-    private void Init(){
+    private void init(){
       arbolSprite = new GreenfootImage [5];
         String nombres[] = {"arbol1.png","arbol1.1.png","arbol1.2.png","arbol1.3.png","arbol1.4.png"};
         
