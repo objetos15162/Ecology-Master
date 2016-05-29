@@ -26,14 +26,15 @@ public class Player extends Actor
         ejeX = ejeY  = 0;
         img = new GreenfootImage(nombreImg);
     }
+    
     /**
      * Constructor , inicializa variables de instancia
      */
     public Player()
     {
         ejeX= ejeY  = 0;
-        
     }
+    
     /**
      * Obtiene la posicion de X y Y de nuestro usuario de su mano derecha y las asigna a nuestras variables
      * Xpos y Ypos
@@ -58,10 +59,10 @@ public class Player extends Actor
     public void setPuntos(int puntaje)
     {
         World mundo = getWorld();
-        Juego mi_mundo =(Juego)mundo;
+        Juego miMundo =(Juego)mundo;
         puntaje = getPuntos();
         puntaje -=1;
-        mi_mundo.setPuntos(puntaje);
+        miMundo.setPuntos(puntaje);
     }
     
     /**
@@ -70,8 +71,8 @@ public class Player extends Actor
     public int getPuntos()
     {
         World mundo = getWorld();
-        Juego mi_mundo =(Juego)mundo;
-        return(mi_mundo.getPuntos());
+        Juego miMundo =(Juego)mundo;
+        return(miMundo.getPuntos());
     }
     
     /**
@@ -81,8 +82,8 @@ public class Player extends Actor
     public void setVida(int vida)
     {
         World mundo = getWorld();
-        Juego mi_mundo =(Juego)mundo;
-        mi_mundo.setVida(vida);    
+        Juego miMundo =(Juego)mundo;
+        miMundo.setVida(vida);    
     }
     
     /**
@@ -91,8 +92,8 @@ public class Player extends Actor
     public int getVida()
     {
         World mundo = getWorld();
-        Juego mi_mundo =(Juego)mundo;
-        return(mi_mundo.getVida());
+        Juego miMundo =(Juego)mundo;
+        return(miMundo.getVida());
     }
     
     /**
@@ -102,11 +103,12 @@ public class Player extends Actor
     public void setPuntosPositive(int puntaje)
     {
         World mundo = getWorld();
-        Juego mi_mundo =(Juego)mundo;
-        puntaje = mi_mundo.getPuntos();
+        Juego miMundo =(Juego)mundo;
+        puntaje = miMundo.getPuntos();
         puntaje +=3;
-        mi_mundo.setPuntos(puntaje);
+        miMundo.setPuntos(puntaje);
     }
+    
     /**
      * @return xPos
      * Retorna la posicion X de la mano derecha de nuestro usuario
@@ -114,6 +116,7 @@ public class Player extends Actor
     public int getXpos(){
         return ejeX;
     }
+    
     /**
      * @return xPos
      * Retorna la posicion Y de la mano derecha de nuestro usuario

@@ -61,7 +61,7 @@ public class Planta extends Player
                 timerPlant.mark();
                   if(timeSprite == 1) {
                     check(1);
-                    recet('1');
+                    reset('1');
                     
                 }
                 else {
@@ -70,7 +70,7 @@ public class Planta extends Player
                    
                 if(timeSprite2 == 2) {
                     check(2);
-                    recet('2');
+                    reset('2');
                 }
                 else {
                    incrementa('2');
@@ -78,14 +78,14 @@ public class Planta extends Player
 
                 if(timeSprite3 == 3) {
                     check(3);
-                    recet('3');}
+                    reset('3');}
                 else {
                    incrementa('3');
                 }
                 
                 if(timeSprite4 == 4) {
                    check(4);
-                   recet('4');
+                   reset('4');
                 }
                 else {
                   incrementa('4');
@@ -97,7 +97,7 @@ public class Planta extends Player
             timerKill.mark();
             if(timeSprite5 == 8 ){
                     check(5);
-                    recet('5');
+                    reset('5');
             }
             else {
                 incrementa('5');
@@ -191,7 +191,7 @@ public class Planta extends Player
     /**
      * Cual tiempo vamos a recetear
      */
-    private void recet(char op){
+    private void reset(char op){
         switch(op){
             case '1':
             timeSprite=0;
